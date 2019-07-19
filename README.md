@@ -1,13 +1,13 @@
 # 移动端技术
 
-* 最低版本 5.0
-* 开发工具：AndroidStudio
-* 开发语言：Java
+* 最低版本 iOS9
+* 开发工具：Xcode
+* 开发语言：Swift + OC
 
 ```js
 iOS: Swift 项目混编 OC；
 Android: Java 项目混编kotlin；
-Vue: TS or JS
+Vue: TS + JS
 ```
 
 ## List
@@ -57,3 +57,7 @@ Vue: TS or JS
 ## NFC
 
 ## 算法
+
+## 项目创建过程
+
+* 引入 Podfile

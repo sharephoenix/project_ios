@@ -1,0 +1,6 @@
+framework module Pods_PhoenixiOS {
+  umbrella header "Pods-PhoenixiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
