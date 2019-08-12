@@ -17,7 +17,39 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     var normalColor = UIColor.black
     /// 文字选中颜色
     var selectedColor = UIColor.blue
-    
+    /// 选中回调方法
+    var callback: ((Int) -> Void)?
+    /// switch 的圆角宽度
+    var switchButtonBorderWidth: CGFloat = 2
+    /// 图片的展示模式
+    var switchContentMode: UIView.ContentMode = .center
+    var switchIconMode: UIView.ContentMode = .center {
+        didSet {
+            switchButton.subviews.first?.contentMode = self.switchIconMode
+        }
+    }
+    /// switch Icon
+    var switchIcon: UIImage? {
+        didSet {
+            switchButton.subviews.forEach { (view) in
+                view.removeFromSuperview()
+            }
+            let imageView = UIImageView(image: self.switchIcon)
+            imageView.image = self.switchIcon
+            imageView.contentMode = self.switchIconMode
+            switchButton.addSubview(imageView)
+        }
+    }
+
+    /// 默认选中
+    var selectedIndex = 0 {
+        didSet {
+            if let callback = self.callback {
+                callback(self.selectedIndex)
+            }
+        }
+    }
+
     open var animationDuration: TimeInterval = 0.3
     open var animationSpringDamping: CGFloat = 0.75
     open var animationInitialSpringVelocity: CGFloat = 0.0
@@ -25,20 +57,13 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     /// 默认图片
     private var normalViews: [T] = [T]()
     /// 选中时候的 image
-    private var selectedViews: [T] = [T]()
+    private var selectedViews: [T?] = [T]()
     /// 默认背景布局
     private var backContent = UIView()
     /// 默认前景选中布局
     private var frontContent = UIView()
     /// 选中滑块
     private var switchButton = UIView()
-
-    /// 默认选中
-    private var selectedIndex = 0 {
-        didSet {
-            print("kkkk::\(self.selectedIndex)")
-        }
-    }
 
     private var normalImageViews = [UIView]()
     private var selectedImageViews = [UIView]()
@@ -55,7 +80,7 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
         didSet { setNeedsLayout() }
     }
 
-    public init(normal: [T], selected: [T]) {
+    public init(normal: [T], selected: [T?]) {
         super.init(frame: CGRect.zero)
 
         self.normalViews = normal
@@ -121,10 +146,16 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     private func restStyle() {
         switchButton.backgroundColor = switchButtonColor
         switchButton.layer.cornerRadius = layer.cornerRadius
-        switchButton.layer.borderWidth = 2
+        switchButton.layer.borderWidth = switchButtonBorderWidth
         switchButton.layer.borderColor = layer.borderColor
         maskLayer.masksToBounds = true
         maskLayer.cornerRadius = layer.cornerRadius
+
+        resetSwitchButton()
+    }
+
+    private func resetSwitchButton() {
+        switchButton.subviews.first?.frame = switchButton.bounds
     }
 
     override func layoutSubviews() {
@@ -142,22 +173,15 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
             let imageView = normalImageViews[i]
             imageView.frame = CGRect(x: CGFloat(i) * width, y: 0, width: width, height: frame.height)
             imageView.backgroundColor = .green
-            if (imageView as? UIImageView) != nil {
-                imageView.subviews.first?.center = CGPoint(x: width / 2, y: frame.height / 2)
-            } else {
-                imageView.subviews.first?.frame = imageView.bounds
-            }
-
+            imageView.subviews.first?.frame = imageView.bounds
+            imageView.subviews.first?.contentMode = switchContentMode
         }
 
         for i in 0..<selectedImageViews.count {
             let imageView = selectedImageViews[i]
             imageView.frame = CGRect(x: CGFloat(i) * width, y: 0, width: width, height: frame.height)
-            if (imageView as? UIImageView) != nil {
-                imageView.subviews.first?.center = CGPoint(x: width / 2, y: frame.height / 2)
-            } else {
-                imageView.subviews.first?.frame = imageView.bounds
-            }
+            imageView.subviews.first?.frame = imageView.bounds
+            imageView.subviews.first?.contentMode = switchContentMode
         }
 
         if frontContent.layer.mask == nil {
@@ -168,7 +192,7 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
         }
 
         maskLayer.frame = switchButton.frame
-        maskLayer.contents = selectedImageViews[0]
+
         maskLayer.backgroundColor = UIColor.white.cgColor
 
         // Gestures

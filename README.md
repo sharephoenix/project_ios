@@ -10,6 +10,9 @@ Android: Java 项目混编kotlin；
 Vue: TS + JS
 ```
 
+## Switch
+  * 完成 Switch 功能
+
 ## List
 
 ## Toast
