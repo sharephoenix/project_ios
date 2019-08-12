@@ -19,6 +19,8 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     var selectedColor = UIColor.blue
     /// 选中回调方法
     var callback: ((Int) -> Void)?
+    /// 背景颜色
+    var bgColor = UIColor.white
     /// switch 的圆角宽度
     var switchButtonBorderWidth: CGFloat = 2
     /// 图片的展示模式
@@ -144,6 +146,7 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
 
     /// 重置界面样式
     private func restStyle() {
+        backContent.backgroundColor = bgColor
         switchButton.backgroundColor = switchButtonColor
         switchButton.layer.cornerRadius = layer.cornerRadius
         switchButton.layer.borderWidth = switchButtonBorderWidth
