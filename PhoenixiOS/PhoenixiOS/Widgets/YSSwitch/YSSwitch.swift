@@ -12,11 +12,31 @@ import UIKit
 
 class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     /// switch Color
-    var switchButtonColor = UIColor.white
+    var switchButtonColor = UIColor.white {
+        didSet {
+            self.switchButton.backgroundColor = self.switchButtonColor
+        }
+    }
     /// 文字默认颜色
-    var normalColor = UIColor.black
+    var normalColor = UIColor.black {
+        didSet {
+            self.normalViews.forEach { (view) in
+                if let view = view as? UIView {
+                    view.backgroundColor = self.normalColor
+                }
+            }
+        }
+    }
     /// 文字选中颜色
-    var selectedColor = UIColor.blue
+    var selectedColor = UIColor.blue {
+        didSet {
+            self.selectedViews.forEach { (view) in
+                if let view = view as? UIView {
+                    view.backgroundColor = self.selectedColor
+                }
+            }
+        }
+    }
     /// 选中回调方法
     var callback: ((Int) -> Void)?
     /// 背景颜色

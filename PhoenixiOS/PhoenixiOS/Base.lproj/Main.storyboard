@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWA-E5-WnB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4U6-HK-WNd">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,24 +10,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--case-->
         <scene sceneID="SkF-Bl-nYG">
             <objects>
-                <navigationController id="kWA-E5-WnB" sceneMemberID="viewController">
+                <navigationController id="kWA-E5-WnB" customClass="YSNavigationController" customModule="PhoenixiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="case" id="9h0-i3-uqJ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5WD-cE-T3P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hgi-qr-HFT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9xx-8P-ZoR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ztp-Dh-r3W"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yf5-Fb-oZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031" y="86"/>
+            <point key="canvasLocation" x="-121.73913043478262" y="85.714285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Mine Controller-->
+        <scene sceneID="Owm-4b-27d">
+            <objects>
+                <viewController id="s8N-Xf-UG1" customClass="MineController" customModule="PhoenixiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uv7-5t-6Ak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gUJ-u8-2pb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RcL-Sq-8CP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajq-9U-q8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="798"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhoenixiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,10 +57,58 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UVy-Td-6Oa"/>
+                    <navigationItem key="navigationItem" title="Title" id="Qqv-bl-WTM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="28.794642857142854"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="quj-qx-0if">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4U6-HK-WNd" customClass="YSTabBarController" customModule="PhoenixiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Inz-XG-Op4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kWA-E5-WnB" kind="relationship" relationship="viewControllers" id="qoH-40-9F0"/>
+                        <segue destination="tPa-sR-YHy" kind="relationship" relationship="viewControllers" id="9eW-qw-t8J"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wA-jX-2eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031.8840579710145" y="85.714285714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qOB-3V-Lxy">
+            <objects>
+                <viewController id="wwZ-X3-e8D" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zpw-bD-NIK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4d-0B-3Jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868.1159420289857" y="1378.7946428571429"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Fdr-99-OwM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPa-sR-YHy" customClass="YSNavigationController" customModule="PhoenixiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1d7-GK-tC9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="smJ-B7-sk8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s8N-Xf-UG1" kind="relationship" relationship="rootViewController" id="vsJ-aK-HMd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZU-rm-X18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="798"/>
         </scene>
     </scenes>
 </document>

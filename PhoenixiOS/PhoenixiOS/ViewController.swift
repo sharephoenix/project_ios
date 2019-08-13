@@ -23,6 +23,22 @@ class ViewController: UIViewController {
         /// 初始化数据
         createData()
         createUI()
+        view.backgroundColor = .red
+        title = "组件"
+        mainTableView.backgroundColor = .yellow
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.backgroundColor = .red
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.alpha = 0.3
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.alpha = 1
     }
 
     private func createData() {
@@ -35,11 +51,20 @@ class ViewController: UIViewController {
         mainTableView.register(UINib.init(nibName: "YSMainCell", bundle: nil), forCellReuseIdentifier: "YSMainCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        mainTableView.layer.borderColor = UIColor.blue.cgColor
+        mainTableView.layer.borderWidth = 2
+        mainTableView.layer.cornerRadius = 4
         mainTableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         mainTableView.layer.borderColor = UIColor.red.cgColor
         mainTableView.layer.borderWidth = 1
+    }
+
+    private func showAlert() {
+        let alert = UIAlertController.init(title: "TITLE", message: "MESSAGE", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction.init(title: "cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -58,7 +83,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = datas[indexPath.row]
         if viewModel.name == "YSSwitch" {
-            navigationController?.pushViewController(YSSwitchController(), animated: true)
+            YSRouter.showYSSwitch(navigationController)
         }
     }
 }
