@@ -109,7 +109,7 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     /// 默认选中
     var selectedIndex = 0 {
         didSet {
-            if let callback = self.callback {
+            if let callback = self.callback, oldValue != self.selectedIndex {
                 callback(self.selectedIndex)
             }
         }
