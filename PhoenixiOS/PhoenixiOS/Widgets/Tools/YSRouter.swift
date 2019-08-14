@@ -24,4 +24,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 调转到 Toast Case 中
+    static func showYSToast(_ navigationController: UINavigationController?) {
+        let vc = YSToastController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

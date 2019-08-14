@@ -63,8 +63,11 @@ class ViewController: UIViewController {
     private func createData() {
         let ysSwitch = YSMainViewModel(name: "YSSwitch")
         let ysButton = YSMainViewModel(name: "YSButton")
+        let ysToast = YSMainViewModel(name: "YSToast")
+
         datas.append(ysSwitch)
         datas.append(ysButton)
+        datas.append(ysToast)
     }
 
     private func createUI() {
@@ -108,6 +111,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if viewModel.name == "YSButton" {
             YSRouter.showYSButton(navigationController)
+        }
+        if viewModel.name == "YSToast" {
+            YSRouter.showYSToast(navigationController)
         }
     }
 }

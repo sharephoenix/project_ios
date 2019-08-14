@@ -41,7 +41,7 @@ extension UIColor {
         var rgbValue: UInt64 = 0
 
         scanner.scanHexInt64(&rgbValue)
-        if rgbValue <= 0xffffff {
+        if currentHex.count <= 6 {
             let r = (rgbValue & 0xff0000) >> 16
             let g = (rgbValue & 0xff00) >> 8
             let b = rgbValue & 0xff
