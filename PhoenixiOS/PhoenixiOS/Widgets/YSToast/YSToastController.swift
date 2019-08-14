@@ -45,6 +45,8 @@ class YSToastController: YSBaseController {
             make.height.equalTo(44)
         }
         parentView = toastAsyncButton
+        parentView.backgroundColor = .green
+        parentView.layer.cornerRadius = 4
 
         toastSyncButton.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(15)
@@ -53,6 +55,8 @@ class YSToastController: YSBaseController {
             make.height.equalTo(44)
         }
         parentView = toastSyncButton
+        parentView.backgroundColor = .green
+        parentView.layer.cornerRadius = 4
 
         toastTipAsync.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(15)
@@ -61,6 +65,8 @@ class YSToastController: YSBaseController {
             make.height.equalTo(44)
         }
         parentView = toastTipAsync
+        parentView.backgroundColor = .green
+        parentView.layer.cornerRadius = 4
 
         toastTipSync.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(15)
@@ -69,6 +75,8 @@ class YSToastController: YSBaseController {
             make.height.equalTo(44)
         }
         parentView = toastTipSync
+        parentView.backgroundColor = .green
+        parentView.layer.cornerRadius = 4
 
         toastAsyncButton.addTarget(self, action: #selector(showToastAsync), for: .touchUpInside)
         toastSyncButton.addTarget(self, action: #selector(showToastSync), for: .touchUpInside)

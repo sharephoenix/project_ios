@@ -142,12 +142,16 @@ class YSToast: NSObject {
         case .TC:
             resetUITC(view, parentView: parentView)
         default:
-            resetUITC(view, parentView: parentView)
+            resetUICC(view, parentView: parentView)
         }
     }
 
     private func resetUITC(_ view: UIView, parentView: UIView) {
         view.frame = CGRect(x: parentView.bounds.width / 2.0 - view.frame.width / 2.0 + offsetX, y: offsetY, width: view.frame.width, height: view.frame.height)
+    }
+    private func resetUICC(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: parentView.bounds.width / 2.0 - view.frame.width / 2.0 + offsetX, y: offsetY, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: parentView.bounds.width / 2, y: parentView.bounds.height / 2)
     }
 
     /// 动画效果
