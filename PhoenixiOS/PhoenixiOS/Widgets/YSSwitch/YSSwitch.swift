@@ -20,19 +20,47 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     /// 文字默认颜色
     var normalColor = UIColor.black {
         didSet {
-            self.normalViews.forEach { (view) in
-                if let view = view as? UIView {
-                    view.backgroundColor = self.normalColor
+            self.normalImageViews.forEach { (view) in
+                if let view = view.subviews.first as? UILabel {
+                    view.textColor = self.normalColor
                 }
+            }
+        }
+    }
+    /// 默认字体
+    var normalFont = UIFont.systemFont(ofSize: 12) {
+        didSet {
+            self.normalImageViews.forEach { (view) in
+                if let view = view.subviews.first as? UILabel {
+                    view.font = self.normalFont
+                }
+            }
+        }
+    }
+    /// 默认背景色
+    var normalBgColor = UIColor.white {
+        didSet {
+            self.normalImageViews.forEach { (view) in
+                view.backgroundColor = self.normalBgColor
             }
         }
     }
     /// 文字选中颜色
     var selectedColor = UIColor.blue {
         didSet {
-            self.selectedViews.forEach { (view) in
-                if let view = view as? UIView {
-                    view.backgroundColor = self.selectedColor
+            self.selectedImageViews.forEach { (view) in
+                if let view = view.subviews.first as? UILabel {
+                    view.textColor = self.selectedColor
+                }
+            }
+        }
+    }
+    /// 选中字体大小
+    var selectedFont = UIFont.systemFont(ofSize: 12) {
+        didSet {
+            self.selectedImageViews.forEach { (view) in
+                if let view = view.subviews.first as? UILabel {
+                    view.font = self.selectedFont
                 }
             }
         }
@@ -43,8 +71,23 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
     var bgColor = UIColor.white
     /// switch 的圆角宽度
     var switchButtonBorderWidth: CGFloat = 2
-    /// 图片的展示模式
-    var switchContentMode: UIView.ContentMode = .center
+    /// 默认图片展示
+    var switchNormalContentMode: UIView.ContentMode = .center {
+        didSet {
+            self.normalImageViews.forEach { (view) in
+                view.subviews.first?.contentMode = self.switchNormalContentMode
+            }
+        }
+    }
+    /// 选中图片展示
+    var switchSelectedContentMode: UIView.ContentMode = .center {
+        didSet {
+            self.selectedImageViews.forEach { (view) in
+                view.subviews.first?.contentMode = self.switchSelectedContentMode
+            }
+        }
+    }
+    /// switch 上图片的布局方式
     var switchIconMode: UIView.ContentMode = .center {
         didSet {
             switchButton.subviews.first?.contentMode = self.switchIconMode
@@ -195,16 +238,16 @@ class YSSwitch<T>: UIControl, UIGestureRecognizerDelegate {
         for i in 0..<normalImageViews.count {
             let imageView = normalImageViews[i]
             imageView.frame = CGRect(x: CGFloat(i) * width, y: 0, width: width, height: frame.height)
-            imageView.backgroundColor = .green
+            imageView.backgroundColor = normalBgColor
             imageView.subviews.first?.frame = imageView.bounds
-            imageView.subviews.first?.contentMode = switchContentMode
+            imageView.subviews.first?.contentMode = switchNormalContentMode
         }
 
         for i in 0..<selectedImageViews.count {
             let imageView = selectedImageViews[i]
             imageView.frame = CGRect(x: CGFloat(i) * width, y: 0, width: width, height: frame.height)
             imageView.subviews.first?.frame = imageView.bounds
-            imageView.subviews.first?.contentMode = switchContentMode
+            imageView.subviews.first?.contentMode = switchSelectedContentMode
         }
 
         if frontContent.layer.mask == nil {

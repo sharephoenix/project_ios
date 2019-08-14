@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         print("fetch name is：\(name)");
         printHellow()
 
-            YSFile.sum(withNum: 8, withNum: 9)
+        YSFile.sum(withNum: 8, withNum: 9)
     }
 
     override func viewWillAppear(_ animated: Bool) {

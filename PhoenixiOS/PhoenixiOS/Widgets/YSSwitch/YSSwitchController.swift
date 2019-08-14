@@ -48,6 +48,11 @@ class YSSwitchController: YSBaseController {
 
         ysImgSwitch.selectedIndex = 1
 
+        ysSwitch.normalColor = .blue
+        ysSwitch.selectedColor = .red
+        ysSwitch.normalFont = UIFont.boldSystemFont(ofSize: 12)
+        ysSwitch.selectedFont = UIFont.systemFont(ofSize: 18)
+        ysSwitch.switchButtonColor = .green
         ysSwitch.layer.cornerRadius = 18
         ysSwitch.layer.borderColor = UIColor.blue.cgColor
         ysSwitch.layer.borderWidth = 1
@@ -56,12 +61,15 @@ class YSSwitchController: YSBaseController {
         ysImgSwitch.layer.borderColor = UIColor.blue.cgColor
         ysImgSwitch.layer.borderWidth = 1
         ysImgSwitch.switchButtonColor = UIColor.init(hex: "#ff0000a4")
+        ysImgSwitch.switchSelectedContentMode = .scaleToFill
+        ysImgSwitch.switchNormalContentMode = .left
 
         ysImgSwitch1.layer.cornerRadius = 18
         ysImgSwitch1.layer.borderColor = UIColor.blue.cgColor
         ysImgSwitch1.layer.borderWidth = 1
         ysImgSwitch1.switchIcon = UIImage(named: "face_001")
         ysImgSwitch1.switchButtonColor = UIColor.init(hex: "#ff0000")
+        ysImgSwitch1.switchIconMode = .scaleToFill
         createAction()
     }
 
