@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180572042303C10D000565AF /* TestCC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180572022303C10C000565AF /* TestCC.cpp */; };
+		1805720A2303C1AB000565AF /* YSFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 180572082303C1AB000565AF /* YSFile.mm */; };
 		186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7122E1623D003EE67A /* AppDelegate.swift */; };
 		186A3A7422E1623D003EE67A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7322E1623D003EE67A /* ViewController.swift */; };
 		186A3A7722E1623D003EE67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7522E1623D003EE67A /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		186A3A7C22E1623F003EE67A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7A22E1623F003EE67A /* LaunchScreen.storyboard */; };
 		186A3A8722E1623F003EE67A /* PhoenixiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A8622E1623F003EE67A /* PhoenixiOSTests.swift */; };
 		186A3A9222E1623F003EE67A /* PhoenixiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A9122E1623F003EE67A /* PhoenixiOSUITests.swift */; };
+		186B32D72303B09100856A08 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D42303B09100856A08 /* CModel.c */; };
+		186B32D82303B09100856A08 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D52303B09100856A08 /* CPPerson.cpp */; };
+		186B32DA2303B21300856A08 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 186B32D92303B21300856A08 /* README.MD */; };
 		18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A95230152F600FCB04F /* YSSwitch.swift */; };
 		18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A982301556500FCB04F /* YSSwitchController.swift */; };
 		18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A9B230156A200FCB04F /* YSMainCell.swift */; };
@@ -47,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		105C1903A7A9D935B3F799C3 /* Pods-PhoenixiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS.release.xcconfig"; sourceTree = "<group>"; };
+		180572022303C10C000565AF /* TestCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestCC.cpp; sourceTree = "<group>"; };
+		180572032303C10C000565AF /* TestCC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestCC.hpp; sourceTree = "<group>"; };
+		180572082303C1AB000565AF /* YSFile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YSFile.mm; sourceTree = "<group>"; };
+		180572092303C1AB000565AF /* YSFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSFile.h; sourceTree = "<group>"; };
 		186A3A6E22E1623D003EE67A /* PhoenixiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A7122E1623D003EE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186A3A7322E1623D003EE67A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +69,13 @@
 		186A3A8D22E1623F003EE67A /* PhoenixiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoenixiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A9122E1623F003EE67A /* PhoenixiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoenixiOSUITests.swift; sourceTree = "<group>"; };
 		186A3A9322E1623F003EE67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186B32C62303A78E00856A08 /* PhoenixiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoenixiOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		186B32D22303B09100856A08 /* CPPerson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CPPerson.hpp; sourceTree = "<group>"; };
+		186B32D32303B09100856A08 /* CModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CModel.h; sourceTree = "<group>"; };
+		186B32D42303B09100856A08 /* CModel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CModel.c; sourceTree = "<group>"; };
+		186B32D52303B09100856A08 /* CPPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPerson.cpp; sourceTree = "<group>"; };
+		186B32D62303B09100856A08 /* CBridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBridging.h; sourceTree = "<group>"; };
+		186B32D92303B21300856A08 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		18DD5A95230152F600FCB04F /* YSSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSSwitch.swift; sourceTree = "<group>"; };
 		18DD5A982301556500FCB04F /* YSSwitchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSwitchController.swift; sourceTree = "<group>"; };
 		18DD5A9B230156A200FCB04F /* YSMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMainCell.swift; sourceTree = "<group>"; };
@@ -157,9 +173,36 @@
 			path = PhoenixiOSUITests;
 			sourceTree = "<group>";
 		};
+		186B32C52303A73500856A08 /* Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				186B32D12303B08300856A08 /* 混编 */,
+				186B32C62303A78E00856A08 /* PhoenixiOS-Bridging-Header.h */,
+			);
+			path = Arithmetic;
+			sourceTree = "<group>";
+		};
+		186B32D12303B08300856A08 /* 混编 */ = {
+			isa = PBXGroup;
+			children = (
+				180572092303C1AB000565AF /* YSFile.h */,
+				180572082303C1AB000565AF /* YSFile.mm */,
+				180572022303C10C000565AF /* TestCC.cpp */,
+				180572032303C10C000565AF /* TestCC.hpp */,
+				186B32D62303B09100856A08 /* CBridging.h */,
+				186B32D92303B21300856A08 /* README.MD */,
+				186B32D42303B09100856A08 /* CModel.c */,
+				186B32D32303B09100856A08 /* CModel.h */,
+				186B32D52303B09100856A08 /* CPPerson.cpp */,
+				186B32D22303B09100856A08 /* CPPerson.hpp */,
+			);
+			path = "混编";
+			sourceTree = "<group>";
+		};
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				186B32C52303A73500856A08 /* Arithmetic */,
 				18DD5AA123027E0E00FCB04F /* Tools */,
 				18DD5A972301530200FCB04F /* YSSwitch */,
 				18DD5A9F23027D2A00FCB04F /* YSBaseController.swift */,
@@ -300,6 +343,7 @@
 				TargetAttributes = {
 					186A3A6D22E1623D003EE67A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1030;
 					};
 					186A3A8122E1623F003EE67A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -340,6 +384,7 @@
 				186A3A7C22E1623F003EE67A /* LaunchScreen.storyboard in Resources */,
 				186A3A7922E1623F003EE67A /* Assets.xcassets in Resources */,
 				186A3A7722E1623D003EE67A /* Main.storyboard in Resources */,
+				186B32DA2303B21300856A08 /* README.MD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +465,15 @@
 				186A3A7422E1623D003EE67A /* ViewController.swift in Sources */,
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
+				186B32D82303B09100856A08 /* CPPerson.cpp in Sources */,
 				18DD5AA323027E2300FCB04F /* YSRouter.swift in Sources */,
+				186B32D72303B09100856A08 /* CModel.c in Sources */,
 				18DD5AA023027D2A00FCB04F /* YSBaseController.swift in Sources */,
 				18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */,
 				18DD5AAD230282A700FCB04F /* YSColorManager.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
+				180572042303C10D000565AF /* TestCC.cpp in Sources */,
+				1805720A2303C1AB000565AF /* YSFile.mm in Sources */,
 				18DD5AAB230280B200FCB04F /* MineController.swift in Sources */,
 				18DD5AA523027EF100FCB04F /* YSNavigationController.swift in Sources */,
 			);
@@ -602,6 +651,7 @@
 			baseConfigurationReference = 1A7B37056D8D56F7F736107E /* Pods-PhoenixiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,6 +660,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.test.PhoenixiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoenixiOS/Widgets/Arithmetic/PhoenixiOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -620,6 +672,7 @@
 			baseConfigurationReference = 105C1903A7A9D935B3F799C3 /* Pods-PhoenixiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,6 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.test.PhoenixiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoenixiOS/Widgets/Arithmetic/PhoenixiOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

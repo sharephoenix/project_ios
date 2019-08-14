@@ -9,6 +9,12 @@
 import UIKit
 import SnapKit
 
+// MARK: - 被C要调用的函数
+
+func swiftFunImplement(a:Int32) -> Void {
+    print("收到一个c函数的Int值->\(a)");
+}
+
 class ViewController: UIViewController {
 
     private var datas: [YSMainViewModel] = [YSMainViewModel]()
@@ -30,6 +36,19 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = .red
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.alpha = 0.3
+
+        test()
+    }
+
+    private func test() {
+        let person = createBy("peter", 14);
+        printPersonInfo(person);
+        let cName = getPersonName(person);
+        let name = String(cString: cName!);
+        print("fetch name is：\(name)");
+        printHellow()
+
+            YSFile.sum(withNum: 8, withNum: 9)
     }
 
     override func viewWillAppear(_ animated: Bool) {
