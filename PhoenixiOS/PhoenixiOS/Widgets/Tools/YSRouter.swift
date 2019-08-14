@@ -18,4 +18,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 调转到 Button Case 中
+    static func showYSButton(_ navigationController: UINavigationController?) {
+        let vc = YSButtonController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
