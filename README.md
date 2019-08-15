@@ -12,6 +12,7 @@ Vue: TS + JS
 
 ## Switch
   * 完成 Switch 功能
+  * 完成 Toast 功能
 
 ## List
 
