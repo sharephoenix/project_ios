@@ -10,15 +10,16 @@ import UIKit
 
 class YSToast: NSObject {
 
-    enum Direction {
-        case TC  // T:TOP,C:CENTER,L:LEFT,R:RIGHT,B:BOTTOM
-        case LT
-        case RT
-        case LB
-        case RB
-        case RC
-        case LC
-        case CC
+    public enum Direction: Int {
+        case TC = 0 // T:TOP,C:CENTER,L:LEFT,R:RIGHT,B:BOTTOM
+        case TL = 1
+        case TR = 2
+        case RC = 3
+        case LC = 4
+        case CC = 5
+        case BC = 6
+        case BL = 7
+        case BR = 8
     }
 
     @objc static let instance = YSToast()
@@ -27,12 +28,12 @@ class YSToast: NSObject {
 
     @objc var duration = 1.5    /// toast 停留时间
 
-    private let direction: Direction = .TC
+    public var direction: Direction = .TC
 
     private var imageStack: [UIView] = [UIView]()
 
-    private let offsetX: CGFloat = 0
-    private let offsetY: CGFloat = 79.0 + UIApplication.shared.statusBarFrame.height
+    var offsetX: CGFloat = 0
+    var offsetY: CGFloat = 0//79.0 + UIApplication.shared.statusBarFrame.height
 
     private var isRunning = false
 
@@ -141,17 +142,70 @@ class YSToast: NSObject {
         switch direction {
         case .TC:
             resetUITC(view, parentView: parentView)
-        default:
+        case .TL:
+            resetUITL(view, parentView: parentView)
+        case .TR:
+            resetUITR(view, parentView: parentView)
+        case .RC:
+            resetUIRC(view, parentView: parentView)
+        case .LC:
+            resetUILC(view, parentView: parentView)
+        case .CC:
             resetUICC(view, parentView: parentView)
+        case .BC:
+            resetUIBC(view, parentView: parentView)
+        case .BL:
+            resetUIBL(view, parentView: parentView)
+        case .BR:
+            resetUIBR(view, parentView: parentView)
         }
     }
 
     private func resetUITC(_ view: UIView, parentView: UIView) {
         view.frame = CGRect(x: parentView.bounds.width / 2.0 - view.frame.width / 2.0 + offsetX, y: offsetY, width: view.frame.width, height: view.frame.height)
     }
+
     private func resetUICC(_ view: UIView, parentView: UIView) {
         view.frame = CGRect(x: parentView.bounds.width / 2.0 - view.frame.width / 2.0 + offsetX, y: offsetY, width: view.frame.width, height: view.frame.height)
         view.center = CGPoint(x: parentView.bounds.width / 2, y: parentView.bounds.height / 2)
+    }
+
+    private func resetUITL(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+    }
+
+    private func resetUITR(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: parentView.bounds.width - view.frame.width + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+    }
+
+    private func resetUILC(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: view.bounds.width / 2 + offsetX,
+                              y: parentView.bounds.height / 2 + offsetY)
+    }
+
+    private func resetUIRC(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: parentView.bounds.width - view.bounds.width / 2 + offsetX,
+                              y: parentView.bounds.height / 2 + offsetY)
+    }
+
+    private func resetUIBC(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: parentView.bounds.width / 2 + offsetX,
+                              y: parentView.bounds.height - view.bounds.height / 2 + offsetY)
+    }
+
+    private func resetUIBL(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: view.bounds.width / 2 + offsetX,
+                              y: parentView.bounds.height - view.bounds.height / 2 + offsetY)
+    }
+
+    private func resetUIBR(_ view: UIView, parentView: UIView) {
+        view.frame = CGRect(x: 0 + offsetX, y: offsetY + 0, width: view.frame.width, height: view.frame.height)
+        view.center = CGPoint(x: parentView.bounds.width - view.bounds.width / 2 + offsetX,
+                              y: parentView.bounds.height - view.bounds.height / 2 + offsetY)
     }
 
     /// 动画效果
