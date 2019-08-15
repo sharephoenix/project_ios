@@ -36,7 +36,8 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = .red
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.alpha = 0.3
-
+        /// 禁用 navigationContrller 边栏返回手势
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         test()
     }
 
@@ -64,10 +65,11 @@ class ViewController: UIViewController {
         let ysSwitch = YSMainViewModel(name: "YSSwitch")
         let ysButton = YSMainViewModel(name: "YSButton")
         let ysToast = YSMainViewModel(name: "YSToast")
-
+        let ysQR = YSMainViewModel(name: "YSQR")
         datas.append(ysSwitch)
         datas.append(ysButton)
         datas.append(ysToast)
+        datas.append(ysQR)
     }
 
     private func createUI() {
@@ -114,6 +116,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if viewModel.name == "YSToast" {
             YSRouter.showYSToast(navigationController)
+        }
+        if viewModel.name == "YSQR" {
+            YSRouter.showYSQR(navigationController)
         }
     }
 }

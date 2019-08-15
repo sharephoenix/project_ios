@@ -13,6 +13,7 @@
 		180572142303E15D000565AF /* YSButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180572132303E15D000565AF /* YSButtonController.swift */; };
 		1805721D23043BCE000565AF /* YSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805721C23043BCE000565AF /* YSToast.swift */; };
 		1805722223043D3D000565AF /* YSToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722123043D3D000565AF /* YSToastController.swift */; };
+		1805722523051B87000565AF /* YSQRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722423051B87000565AF /* YSQRController.swift */; };
 		186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7122E1623D003EE67A /* AppDelegate.swift */; };
 		186A3A7422E1623D003EE67A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7322E1623D003EE67A /* ViewController.swift */; };
 		186A3A7722E1623D003EE67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7522E1623D003EE67A /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		180572132303E15D000565AF /* YSButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSButtonController.swift; sourceTree = "<group>"; };
 		1805721C23043BCE000565AF /* YSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSToast.swift; sourceTree = "<group>"; };
 		1805722123043D3D000565AF /* YSToastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSToastController.swift; sourceTree = "<group>"; };
+		1805722423051B87000565AF /* YSQRController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSQRController.swift; sourceTree = "<group>"; };
 		186A3A6E22E1623D003EE67A /* PhoenixiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A7122E1623D003EE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186A3A7322E1623D003EE67A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 				1805722123043D3D000565AF /* YSToastController.swift */,
 			);
 			path = YSToast;
+			sourceTree = "<group>";
+		};
+		1805722323051B6B000565AF /* YSQR */ = {
+			isa = PBXGroup;
+			children = (
+				1805722423051B87000565AF /* YSQRController.swift */,
+			);
+			path = YSQR;
 			sourceTree = "<group>";
 		};
 		186A3A6522E1623C003EE67A = {
@@ -228,6 +238,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				1805722323051B6B000565AF /* YSQR */,
 				1805721B23043B7B000565AF /* YSToast */,
 				1805720D2303E047000565AF /* YSButton */,
 				186B32C52303A73500856A08 /* Arithmetic */,
@@ -508,6 +519,7 @@
 				180572142303E15D000565AF /* YSButtonController.swift in Sources */,
 				18DD5AAB230280B200FCB04F /* MineController.swift in Sources */,
 				18DD5AA523027EF100FCB04F /* YSNavigationController.swift in Sources */,
+				1805722523051B87000565AF /* YSQRController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,12 +697,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.test.PhoenixiOS;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PhoenixiOS/Widgets/YSQR/ZBarSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexluan.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhoenixiOS/Widgets/Arithmetic/PhoenixiOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -706,12 +724,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.test.PhoenixiOS;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PhoenixiOS/Widgets/YSQR/ZBarSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexluan.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhoenixiOS/Widgets/Arithmetic/PhoenixiOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -30,4 +30,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 调用视频录制
+    static func showYSQR(_ navigationController: UINavigationController?) {
+        let vc = YSQRController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
