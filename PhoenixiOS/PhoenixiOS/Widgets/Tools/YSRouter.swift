@@ -30,9 +30,15 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
-    /// 调用视频录制
+    /// 调用二维码扫描
     static func showYSQR(_ navigationController: UINavigationController?) {
         let vc = YSQRController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    /// 调用视频录制
+    static func showYSVideoRtmp(_ navigationController: UINavigationController?) {
+        let vc = YSVideoRtmpController()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }

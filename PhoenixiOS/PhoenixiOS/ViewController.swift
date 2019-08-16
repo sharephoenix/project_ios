@@ -120,6 +120,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if viewModel.name == "YSQR" {
             YSRouter.showYSQR(navigationController)
         }
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
     }
 }
 

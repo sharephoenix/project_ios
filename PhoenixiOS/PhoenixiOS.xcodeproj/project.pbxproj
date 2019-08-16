@@ -14,6 +14,10 @@
 		1805721D23043BCE000565AF /* YSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805721C23043BCE000565AF /* YSToast.swift */; };
 		1805722223043D3D000565AF /* YSToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722123043D3D000565AF /* YSToastController.swift */; };
 		1805722523051B87000565AF /* YSQRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722423051B87000565AF /* YSQRController.swift */; };
+		1805725023064A84000565AF /* YSQRImageBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1805724F23064A84000565AF /* YSQRImageBuffer.mm */; };
+		1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805727023068E92000565AF /* YSVideoRtmp.swift */; };
+		1805727423069266000565AF /* YSSystemQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805727323069266000565AF /* YSSystemQR.swift */; };
+		1807ADEA2306BC4900082C94 /* YSVideoRtmpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADE92306BC4900082C94 /* YSVideoRtmpController.swift */; };
 		186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7122E1623D003EE67A /* AppDelegate.swift */; };
 		186A3A7422E1623D003EE67A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7322E1623D003EE67A /* ViewController.swift */; };
 		186A3A7722E1623D003EE67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7522E1623D003EE67A /* Main.storyboard */; };
@@ -66,6 +70,11 @@
 		1805721C23043BCE000565AF /* YSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSToast.swift; sourceTree = "<group>"; };
 		1805722123043D3D000565AF /* YSToastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSToastController.swift; sourceTree = "<group>"; };
 		1805722423051B87000565AF /* YSQRController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSQRController.swift; sourceTree = "<group>"; };
+		1805724E23064A84000565AF /* YSQRImageBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSQRImageBuffer.h; sourceTree = "<group>"; };
+		1805724F23064A84000565AF /* YSQRImageBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YSQRImageBuffer.mm; sourceTree = "<group>"; };
+		1805727023068E92000565AF /* YSVideoRtmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoRtmp.swift; sourceTree = "<group>"; };
+		1805727323069266000565AF /* YSSystemQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSystemQR.swift; sourceTree = "<group>"; };
+		1807ADE92306BC4900082C94 /* YSVideoRtmpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoRtmpController.swift; sourceTree = "<group>"; };
 		186A3A6E22E1623D003EE67A /* PhoenixiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A7122E1623D003EE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186A3A7322E1623D003EE67A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +158,20 @@
 			isa = PBXGroup;
 			children = (
 				1805722423051B87000565AF /* YSQRController.swift */,
+				1805727323069266000565AF /* YSSystemQR.swift */,
+				1805724E23064A84000565AF /* YSQRImageBuffer.h */,
+				1805724F23064A84000565AF /* YSQRImageBuffer.mm */,
 			);
 			path = YSQR;
+			sourceTree = "<group>";
+		};
+		18057272230690FE000565AF /* YSVideoRtmp */ = {
+			isa = PBXGroup;
+			children = (
+				1805727023068E92000565AF /* YSVideoRtmp.swift */,
+				1807ADE92306BC4900082C94 /* YSVideoRtmpController.swift */,
+			);
+			path = YSVideoRtmp;
 			sourceTree = "<group>";
 		};
 		186A3A6522E1623C003EE67A = {
@@ -238,6 +259,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				18057272230690FE000565AF /* YSVideoRtmp */,
 				1805722323051B6B000565AF /* YSQR */,
 				1805721B23043B7B000565AF /* YSToast */,
 				1805720D2303E047000565AF /* YSButton */,
@@ -508,10 +530,14 @@
 				186B32D82303B09100856A08 /* CPPerson.cpp in Sources */,
 				18DD5AA323027E2300FCB04F /* YSRouter.swift in Sources */,
 				186B32D72303B09100856A08 /* CModel.c in Sources */,
+				1807ADEA2306BC4900082C94 /* YSVideoRtmpController.swift in Sources */,
 				18DD5AA023027D2A00FCB04F /* YSBaseController.swift in Sources */,
+				1805725023064A84000565AF /* YSQRImageBuffer.mm in Sources */,
+				1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */,
 				18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */,
 				1805720F2303E05C000565AF /* YSButton.swift in Sources */,
 				18DD5AAD230282A700FCB04F /* YSColorManager.swift in Sources */,
+				1805727423069266000565AF /* YSSystemQR.swift in Sources */,
 				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
 				180572042303C10D000565AF /* TestCC.cpp in Sources */,
