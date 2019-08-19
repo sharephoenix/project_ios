@@ -78,13 +78,15 @@ class YSSystemQR: NSObject {
 
     @objc func fixScanArea() {
 
-
         if Thread.current.isMainThread {
             prewview.frame = parentView?.bounds ?? CGRect(x: 0, y: 0, width: 330, height: 330)
             let react = CGRect(x: offsetX, y: offsetY, width: width, height: height)
-            output.rectOfInterest = react
+            converToMetadataOutputReact(cropRect: react,
+                                        session: session,
+                                        prewview: prewview,
+                                        output: output)
             maskLayer.frame = react
-//            prewview.mask = maskLayer
+//            parentView?.layer.mask = maskLayer
         } else {
             perform(#selector(fixScanArea), on: Thread.main, with: nil, waitUntilDone: true)
         }
@@ -97,6 +99,84 @@ class YSSystemQR: NSObject {
 
     func stopRunning() {
         session.stopRunning()
+    }
+
+    private func converToMetadataOutputReact(cropRect: CGRect,
+                                             session: AVCaptureSession,
+                                             prewview: AVCaptureVideoPreviewLayer,
+                                             output: AVCaptureMetadataOutput) {
+        let size = prewview.bounds.size
+        let p1: CGFloat = size.height / size.width
+        var p2: CGFloat = 0.0
+
+        switch session.sessionPreset {
+        case .hd1920x1080:
+            p2 = 1920 / 1080
+        case .cif352x288:
+            p2 = 352 / 288
+        case .hd1920x1080:
+            p2 = 1920 / 1080
+        case .iFrame1280x720:
+            p2 = 1280 / 720
+        case .iFrame960x540:
+            p2 = 960 / 540
+        case .hd1280x720:
+            p2 = 1280 / 720
+        case .high:
+            p2 = 1920 / 1080
+        case .medium:
+            p2 = 480 / 360
+        case .low:
+            p2 = 192 / 144
+        case .photo:
+            p2 = 4 / 3
+        case .inputPriority:
+            p2 = 1920 / 1080
+        case .hd4K3840x2160:
+            p2 = 3840 / 2160
+        default:
+            p2 = 1920 / 1080
+        }
+
+        if prewview.videoGravity == AVLayerVideoGravity.resize {
+            output.rectOfInterest = CGRect(x: cropRect.minY / size.height,
+                                                    y: (size.width - (cropRect.width + cropRect.minX)) / size.width,
+                                                    width: cropRect.size.height / size.height,
+                                                    height: cropRect.width / size.width)
+        } else if prewview.videoGravity == AVLayerVideoGravity.resizeAspectFill {
+            if p1 < p2 {
+                let fixHeight = size.width * p2
+                let fixPadding = (fixHeight - size.height) / 2
+
+                output.rectOfInterest = CGRect(x: (cropRect.minY + fixPadding) / fixHeight,
+                                                        y: (size.width - (cropRect.width + cropRect.minX)) / size.width,
+                                                        width: cropRect.size.height / fixHeight,
+                                                        height: cropRect.width / size.width)
+            } else {
+                let fixWidth = size.height * (1 / p2)
+                let fixPadding = (fixWidth - size.width) / 2
+                output.rectOfInterest = CGRect(x: cropRect.minY / size.height,
+                                                        y: (size.width - (cropRect.width + cropRect.minX) + fixPadding) / fixWidth,
+                                                        width: cropRect.size.height / size.height,
+                                                        height: cropRect.width / fixWidth)
+            }
+        } else if prewview.videoGravity == AVLayerVideoGravity.resizeAspect {
+            if p1 > p2 {
+                let fixHeight = size.width * p2
+                let fixPadding = (fixHeight - size.height) / 2
+                output.rectOfInterest = CGRect(x: (cropRect.minY + fixPadding) / fixHeight,
+                                                        y: (size.width - (cropRect.width + cropRect.minX)) / size.width,
+                                                        width: cropRect.size.height / fixHeight,
+                                                        height: cropRect.width / size.width)
+            } else {
+                let fixWidth = size.height * (1 / p2)
+                let fixPadding = (fixWidth - size.width) / 2
+                output.rectOfInterest = CGRect(x: cropRect.minY / size.height,
+                                                        y: (size.width - (cropRect.width + cropRect.minX) + fixPadding) / fixWidth,
+                                                        width: cropRect.size.height / size.height,
+                                                        height: cropRect.width / fixWidth)
+            }
+        }
     }
 
     deinit {
