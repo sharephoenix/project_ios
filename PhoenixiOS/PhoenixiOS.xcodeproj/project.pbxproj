@@ -18,6 +18,8 @@
 		1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805727023068E92000565AF /* YSVideoRtmp.swift */; };
 		1805727423069266000565AF /* YSSystemQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805727323069266000565AF /* YSSystemQR.swift */; };
 		1807ADEA2306BC4900082C94 /* YSVideoRtmpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADE92306BC4900082C94 /* YSVideoRtmpController.swift */; };
+		1807ADEF230E388D00082C94 /* YSVideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADEE230E388D00082C94 /* YSVideoPlayerController.swift */; };
+		1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADF0230E441B00082C94 /* YSVideoPlayerTools.swift */; };
 		186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7122E1623D003EE67A /* AppDelegate.swift */; };
 		186A3A7422E1623D003EE67A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7322E1623D003EE67A /* ViewController.swift */; };
 		186A3A7722E1623D003EE67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7522E1623D003EE67A /* Main.storyboard */; };
@@ -75,6 +77,8 @@
 		1805727023068E92000565AF /* YSVideoRtmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoRtmp.swift; sourceTree = "<group>"; };
 		1805727323069266000565AF /* YSSystemQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSystemQR.swift; sourceTree = "<group>"; };
 		1807ADE92306BC4900082C94 /* YSVideoRtmpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoRtmpController.swift; sourceTree = "<group>"; };
+		1807ADEE230E388D00082C94 /* YSVideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoPlayerController.swift; sourceTree = "<group>"; };
+		1807ADF0230E441B00082C94 /* YSVideoPlayerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoPlayerTools.swift; sourceTree = "<group>"; };
 		186A3A6E22E1623D003EE67A /* PhoenixiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A7122E1623D003EE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186A3A7322E1623D003EE67A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 			path = YSVideoRtmp;
 			sourceTree = "<group>";
 		};
+		1807ADED230E386300082C94 /* YSVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1807ADEE230E388D00082C94 /* YSVideoPlayerController.swift */,
+				1807ADF0230E441B00082C94 /* YSVideoPlayerTools.swift */,
+			);
+			path = YSVideoPlayer;
+			sourceTree = "<group>";
+		};
 		186A3A6522E1623C003EE67A = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +272,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				1807ADED230E386300082C94 /* YSVideoPlayer */,
 				18057272230690FE000565AF /* YSVideoRtmp */,
 				1805722323051B6B000565AF /* YSQR */,
 				1805721B23043B7B000565AF /* YSToast */,
@@ -540,9 +554,11 @@
 				1805727423069266000565AF /* YSSystemQR.swift in Sources */,
 				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
+				1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */,
 				180572042303C10D000565AF /* TestCC.cpp in Sources */,
 				1805720A2303C1AB000565AF /* YSFile.mm in Sources */,
 				180572142303E15D000565AF /* YSButtonController.swift in Sources */,
+				1807ADEF230E388D00082C94 /* YSVideoPlayerController.swift in Sources */,
 				18DD5AAB230280B200FCB04F /* MineController.swift in Sources */,
 				18DD5AA523027EF100FCB04F /* YSNavigationController.swift in Sources */,
 				1805722523051B87000565AF /* YSQRController.swift in Sources */,

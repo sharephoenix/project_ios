@@ -66,10 +66,15 @@ class ViewController: UIViewController {
         let ysButton = YSMainViewModel(name: "YSButton")
         let ysToast = YSMainViewModel(name: "YSToast")
         let ysQR = YSMainViewModel(name: "YSQR")
+        let ysVideoRtmp = YSMainViewModel(name: "YSVideoRtmp")
+        let ysVideoPlayer = YSMainViewModel(name: "YSVideoPlayer")
+
         datas.append(ysSwitch)
         datas.append(ysButton)
         datas.append(ysToast)
         datas.append(ysQR)
+        datas.append(ysVideoRtmp)
+        datas.append(ysVideoPlayer)
     }
 
     private func createUI() {
@@ -119,6 +124,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if viewModel.name == "YSQR" {
             YSRouter.showYSQR(navigationController)
+        }
+        if viewModel.name == "YSVideoRtmp" {
+            YSRouter.showYSVideoRtmp(navigationController)
+        }
+        if viewModel.name == "YSVideoPlayer" {
+            YSRouter.showYSVideoPlayer(navigationController)
         }
         let cell = tableView.cellForRow(at: indexPath)
         cell?.isSelected = false

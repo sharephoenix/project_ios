@@ -42,4 +42,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 视频播放器
+    static func showYSVideoPlayer(_ navigationController: UINavigationController?) {
+        let vc = YSVideoPlayerController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
