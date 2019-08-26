@@ -11,8 +11,11 @@ import MediaPlayer
 
 class YSVideoPlayerController: YSBaseController {
     private let palyerUrls = ["http://192.168.21.252:8000/a.mkv",
-                      "http://192.168.21.252:8000/b.mov"]
-    private let playerUrlIndex = 1
+                              "http://192.168.21.252:8000/b.mov",
+                              "http://192.168.21.252:8000/d.mov",
+                              "http://192.168.21.252:8000/c.mp4",
+                              "http://192.168.21.252:8000/favicon.ico"]
+    private let playerUrlIndex = 3
 
     private var currentUrl: String {
         get {
@@ -87,7 +90,7 @@ class YSVideoPlayerController: YSBaseController {
         buttonRemoveImage = UIButton()
         buttonRemoveImage.backgroundColor = UIColor.lightGray
         buttonRemoveImage.setTitle("buttonRemoveImage", for: UIControl.State.normal)
-        buttonRemoveImage.addTarget(self, action: #selector(removeImage), for: UIControl.Event.touchUpInside)
+        buttonRemoveImage.addTarget(self, action: #selector(clearCache), for: UIControl.Event.touchUpInside)
         contentView.addSubview(buttonRemoveImage)
 
         buttonRemoveImage.snp.makeConstraints { (make) in
@@ -116,7 +119,7 @@ class YSVideoPlayerController: YSBaseController {
     /***********************************/
         buttoncase1 = UIButton()
         buttoncase1.backgroundColor = UIColor.lightGray
-        buttoncase1.setTitle("actioncase1", for: UIControl.State.normal)
+        buttoncase1.setTitle("actioncase1_弃用", for: UIControl.State.normal)
         buttoncase1.addTarget(self, action: #selector(actionCase1), for: UIControl.Event.touchUpInside)
         contentView.addSubview(buttoncase1)
 
@@ -179,18 +182,21 @@ class YSVideoPlayerController: YSBaseController {
     }
 
     @objc private func getImage() {
-        let image = YSVideoPlayerTools .getVideoImageWithTime(time: 8, path: URL(string: currentUrl)!)
+        clearCache()
+        let image = YSVideoPlayerTools .getVideoImageWithTime(time: 8000, path: URL(string: currentUrl)!)
         imageView.image = image
         if avplayer != nil {
             avplayer.pause()
         }
-        if avplayerLayer != nil {
-            avplayerLayer.removeFromSuperlayer()
-        }
     }
 
-    @objc private func removeImage() {
+    @objc private func clearCache() {
         imageView.image = nil
+        imageView.layer.sublayers?.forEach({ (layer) in
+            layer.removeFromSuperlayer()
+        })
+        avplayer = nil
+        avplayerLayer = nil
     }
     
 }

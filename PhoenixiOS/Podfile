@@ -8,5 +8,5 @@ target 'PhoenixiOS' do
     pod 'Alamofire' #, '~> 4.0.1'
     pod 'Kingfisher' #, '~> 3.1.1'
     pod 'SnapKit' #, '~> 4.2.0'
-
+    pod 'SwiftSoup' # html 标签解析 puppeteer
 end

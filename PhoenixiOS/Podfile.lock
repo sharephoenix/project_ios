@@ -2,23 +2,27 @@ PODS:
   - Alamofire (4.8.2)
   - Kingfisher (4.10.1)
   - SnapKit (4.2.0)
+  - SwiftSoup (2.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
   - SnapKit
+  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
     - SnapKit
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
 
-PODFILE CHECKSUM: dd1ea81e0927b9087f7d6fb98d18c65fed84a85c
+PODFILE CHECKSUM: 0b0b88c70055fcd9e5d79e0610508df448f093a0
 
 COCOAPODS: 1.5.3
