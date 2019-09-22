@@ -59,6 +59,14 @@ class GetResponderController: YSBaseController {
     private let textField: UITextField = {
         let textfield = UITextField()
         textfield.text = "我的地址\(textfield)"
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 99))
+        label.text = "我是自定义键盘"
+        label.backgroundColor = .green
+        let label0 = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 99))
+        label0.text = "我是自定义键盘,的自定义顶部"
+        label0.backgroundColor = .blue
+        textfield.inputView = label
+        textfield.inputAccessoryView = label0
         return textfield
     }()
 

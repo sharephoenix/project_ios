@@ -101,6 +101,13 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction.init(title: "cancel", style: UIAlertAction.Style.cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+
+    private let window: UIWindow = {
+        let window = UIWindow()
+        window.frame = UIScreen.main.bounds
+        window.backgroundColor = .yellow
+        return window
+    }()
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
