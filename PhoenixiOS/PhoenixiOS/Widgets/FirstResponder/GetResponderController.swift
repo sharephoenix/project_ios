@@ -46,7 +46,7 @@ class GetResponderController: YSBaseController {
     private func createActions() {
         responderBtn.reactive.controlEvents(.touchUpInside).observeValues { (button) in
             let vv = SystemTool.getFirstResponder(baseView: self.view)
-            self.firstLabel.text = "\(vv)"
+            self.firstLabel.text = "\(String(describing: vv))"
         }
     }
 
