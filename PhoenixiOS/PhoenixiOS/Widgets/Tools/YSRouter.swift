@@ -48,4 +48,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 引导页
+    static func showYSGuideController(_ navigationController: UINavigationController?) {
+        let vc = GuideController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

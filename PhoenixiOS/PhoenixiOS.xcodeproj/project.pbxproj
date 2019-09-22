@@ -43,6 +43,10 @@
 		18DD5AAD230282A700FCB04F /* YSColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5AAC230282A700FCB04F /* YSColorManager.swift */; };
 		18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5AAE230282BD00FCB04F /* YSImageManager.swift */; };
 		CC6A31BCD248E26561A0DFB4 /* Pods_PhoenixiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534D0B7EBFB7C9F4525CF060 /* Pods_PhoenixiOS.framework */; };
+		D0825D3323370F620041738C /* SystemTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D3223370F620041738C /* SystemTool.swift */; };
+		D0825D39233712580041738C /* GuideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D37233712580041738C /* GuideManager.swift */; };
+		D0825D3A233712580041738C /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D38233712580041738C /* GuideMaskView.swift */; };
+		D0825D3D233714180041738C /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D3C233714180041738C /* GuideController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		18DD5AAE230282BD00FCB04F /* YSImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSImageManager.swift; sourceTree = "<group>"; };
 		1A7B37056D8D56F7F736107E /* Pods-PhoenixiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		534D0B7EBFB7C9F4525CF060 /* Pods_PhoenixiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoenixiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0825D3223370F620041738C /* SystemTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTool.swift; sourceTree = "<group>"; };
+		D0825D37233712580041738C /* GuideManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideManager.swift; sourceTree = "<group>"; };
+		D0825D38233712580041738C /* GuideMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideMaskView.swift; sourceTree = "<group>"; };
+		D0825D3C233714180041738C /* GuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,7 @@
 		186A3A7022E1623D003EE67A /* PhoenixiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D0825D3123370F390041738C /* UTools */,
 				18DD5AA82302808700FCB04F /* views */,
 				18DD5A9A2301567900FCB04F /* components */,
 				18DD5A94230152DA00FCB04F /* Widgets */,
@@ -282,6 +291,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				D0825D3B233713F60041738C /* GuideCase */,
 				1807ADF4230E9CB700082C94 /* HtmlParse */,
 				1807ADED230E386300082C94 /* YSVideoPlayer */,
 				18057272230690FE000565AF /* YSVideoRtmp */,
@@ -357,6 +367,32 @@
 				105C1903A7A9D935B3F799C3 /* Pods-PhoenixiOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0825D3123370F390041738C /* UTools */ = {
+			isa = PBXGroup;
+			children = (
+				D0825D36233712580041738C /* Guide */,
+				D0825D3223370F620041738C /* SystemTool.swift */,
+			);
+			path = UTools;
+			sourceTree = "<group>";
+		};
+		D0825D36233712580041738C /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				D0825D37233712580041738C /* GuideManager.swift */,
+				D0825D38233712580041738C /* GuideMaskView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		D0825D3B233713F60041738C /* GuideCase */ = {
+			isa = PBXGroup;
+			children = (
+				D0825D3C233714180041738C /* GuideController.swift */,
+			);
+			path = GuideCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +560,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
@@ -533,6 +575,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
@@ -550,10 +598,12 @@
 			files = (
 				18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */,
 				18DD5AA723027F0E00FCB04F /* YSTabBarController.swift in Sources */,
+				D0825D3D233714180041738C /* GuideController.swift in Sources */,
 				1805721D23043BCE000565AF /* YSToast.swift in Sources */,
 				186A3A7422E1623D003EE67A /* ViewController.swift in Sources */,
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
+				D0825D3A233712580041738C /* GuideMaskView.swift in Sources */,
 				186B32D82303B09100856A08 /* CPPerson.cpp in Sources */,
 				18DD5AA323027E2300FCB04F /* YSRouter.swift in Sources */,
 				186B32D72303B09100856A08 /* CModel.c in Sources */,
@@ -564,7 +614,9 @@
 				18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */,
 				1805720F2303E05C000565AF /* YSButton.swift in Sources */,
 				18DD5AAD230282A700FCB04F /* YSColorManager.swift in Sources */,
+				D0825D39233712580041738C /* GuideManager.swift in Sources */,
 				1805727423069266000565AF /* YSSystemQR.swift in Sources */,
+				D0825D3323370F620041738C /* SystemTool.swift in Sources */,
 				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
 				1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */,
