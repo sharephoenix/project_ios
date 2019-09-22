@@ -69,6 +69,8 @@ class ViewController: UIViewController {
         let ysVideoRtmp = YSMainViewModel(name: "YSVideoRtmp")
         let ysVideoPlayer = YSMainViewModel(name: "YSVideoPlayer")
         let ysGuide = YSMainViewModel(name: "YSGuideController")
+        let ysFirstResponder = YSMainViewModel(name: "YSFistResponder")
+
         datas.append(ysSwitch)
         datas.append(ysButton)
         datas.append(ysToast)
@@ -76,6 +78,7 @@ class ViewController: UIViewController {
         datas.append(ysVideoRtmp)
         datas.append(ysVideoPlayer)
         datas.append(ysGuide)
+        datas.append(ysFirstResponder)
     }
 
     private func createUI() {
@@ -134,6 +137,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if viewModel.name == "YSGuideController" {
             YSRouter.showYSGuideController(navigationController)
+        }
+        if viewModel.name == "YSFistResponder" {
+            YSRouter.showFirstResponder(navigationController)
         }
 
         let cell = tableView.cellForRow(at: indexPath)

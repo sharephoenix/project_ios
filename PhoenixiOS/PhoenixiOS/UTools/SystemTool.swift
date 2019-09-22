@@ -14,7 +14,7 @@ class SystemTool: NSObject {
     ///
     /// - Parameter baseView: 给一个基本View
     /// - Returns: 返回 第一响应者的 View
-    private func getFirstResponder(baseView: UIView) -> UIView? {
+    static func getFirstResponder(baseView: UIView) -> UIView? {
         if baseView.isFirstResponder {
             return baseView
         }

@@ -47,6 +47,7 @@
 		D0825D39233712580041738C /* GuideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D37233712580041738C /* GuideManager.swift */; };
 		D0825D3A233712580041738C /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D38233712580041738C /* GuideMaskView.swift */; };
 		D0825D3D233714180041738C /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D3C233714180041738C /* GuideController.swift */; };
+		D0825D40233720810041738C /* GetResponderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D3F233720810041738C /* GetResponderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		D0825D37233712580041738C /* GuideManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideManager.swift; sourceTree = "<group>"; };
 		D0825D38233712580041738C /* GuideMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideMaskView.swift; sourceTree = "<group>"; };
 		D0825D3C233714180041738C /* GuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
+		D0825D3F233720810041738C /* GetResponderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResponderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				D0825D3E233720510041738C /* FirstResponder */,
 				D0825D3B233713F60041738C /* GuideCase */,
 				1807ADF4230E9CB700082C94 /* HtmlParse */,
 				1807ADED230E386300082C94 /* YSVideoPlayer */,
@@ -393,6 +396,14 @@
 				D0825D3C233714180041738C /* GuideController.swift */,
 			);
 			path = GuideCase;
+			sourceTree = "<group>";
+		};
+		D0825D3E233720510041738C /* FirstResponder */ = {
+			isa = PBXGroup;
+			children = (
+				D0825D3F233720810041738C /* GetResponderController.swift */,
+			);
+			path = FirstResponder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +614,7 @@
 				186A3A7422E1623D003EE67A /* ViewController.swift in Sources */,
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
+				D0825D40233720810041738C /* GetResponderController.swift in Sources */,
 				D0825D3A233712580041738C /* GuideMaskView.swift in Sources */,
 				186B32D82303B09100856A08 /* CPPerson.cpp in Sources */,
 				18DD5AA323027E2300FCB04F /* YSRouter.swift in Sources */,

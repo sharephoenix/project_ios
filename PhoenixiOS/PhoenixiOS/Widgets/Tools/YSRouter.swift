@@ -54,4 +54,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 获取第一响应者
+    static func showFirstResponder(_ navigationController: UINavigationController?) {
+        let vc = GetResponderController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
