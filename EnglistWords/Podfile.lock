@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (4.9.0)
+  - Kingfisher (4.10.1)
+  - ReactiveCocoa (9.0.0):
+    - ReactiveSwift (~> 5.0)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SnapKit (4.2.0)
+  - SwiftSoup (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - ReactiveCocoa (~> 9.0)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - SnapKit
+  - SwiftSoup
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftSoup
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
+
+PODFILE CHECKSUM: e487532b5b92564d678053614e3c7285192215f4
+
+COCOAPODS: 1.5.3
