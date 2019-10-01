@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         title = "雅思词汇"
         createUI()
         createData()
+        for f in UIFont.familyNames {
+            print("familyNames: \(f)")
+            for s in UIFont.fontNames(forFamilyName: f) {
+                print("ffff::: \(s)")
+            }
+        }
     }
 
     private func createUI() {
@@ -27,7 +33,7 @@ class ViewController: UIViewController {
         tableView.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
             make.top.equalToSuperview().offset(view.safeAreaInsets.top)
-            make.bottom.equalToSuperview().offset(-view.safeAreaInsets.bottom)
+            make.bottom.equalTo(view.snp.bottomMargin)
         }
     }
 
@@ -53,7 +59,6 @@ class ViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
     }
 }
 
@@ -64,9 +69,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.contentView.backgroundColor = .white
         cell?.selectionStyle = .none
-        cell?.textLabel?.textColor = .black
+        cell?.textLabel?.textColor = .label
         cell?.textLabel?.text = getIdentifier(index: indexPath.row)
         return cell!
     }

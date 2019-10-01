@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		549A1BAAE53B40BBBE63E708 /* Pods_EnglistWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805B7A41B109C160A3B8E318 /* Pods_EnglistWords.framework */; };
-		D01F5006234249A100B8122D /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F5005234249A100B8122D /* MoreController.swift */; };
 		D0825D5023402FD40041738C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D4F23402FD40041738C /* AppDelegate.swift */; };
 		D0825D5223402FD40041738C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D5123402FD40041738C /* ViewController.swift */; };
 		D0825D5523402FD40041738C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0825D5323402FD40041738C /* Main.storyboard */; };
@@ -17,6 +16,16 @@
 		D0825D6523402FD80041738C /* EnglistWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D6423402FD80041738C /* EnglistWordsTests.swift */; };
 		D0825D7023402FD80041738C /* EnglistWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D6F23402FD80041738C /* EnglistWordsUITests.swift */; };
 		D0825D7E2340317F0041738C /* VoiceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D7D2340317F0041738C /* VoiceDetailController.swift */; };
+		D09A953623439C610045DBD2 /* iconfont.js in Resources */ = {isa = PBXBuildFile; fileRef = D09A952C23439C610045DBD2 /* iconfont.js */; };
+		D09A953723439C610045DBD2 /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = D09A952D23439C610045DBD2 /* demo.css */; };
+		D09A953823439C610045DBD2 /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = D09A952E23439C610045DBD2 /* iconfont.json */; };
+		D09A953923439C610045DBD2 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = D09A952F23439C610045DBD2 /* iconfont.woff */; };
+		D09A953A23439C610045DBD2 /* iconfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = D09A953023439C610045DBD2 /* iconfont.eot */; };
+		D09A953B23439C610045DBD2 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D09A953123439C610045DBD2 /* iconfont.ttf */; };
+		D09A953C23439C610045DBD2 /* demo_index.html in Resources */ = {isa = PBXBuildFile; fileRef = D09A953223439C610045DBD2 /* demo_index.html */; };
+		D09A953D23439C610045DBD2 /* iconfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D09A953323439C610045DBD2 /* iconfont.woff2 */; };
+		D09A953E23439C610045DBD2 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = D09A953423439C610045DBD2 /* iconfont.svg */; };
+		D09A953F23439C610045DBD2 /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = D09A953523439C610045DBD2 /* iconfont.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +49,6 @@
 		3D9F5E4960EC0B8921112F88 /* Pods-EnglistWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglistWords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglistWords/Pods-EnglistWords.debug.xcconfig"; sourceTree = "<group>"; };
 		805B7A41B109C160A3B8E318 /* Pods_EnglistWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglistWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5AB1F68B46FF3125D97BD0 /* Pods-EnglistWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglistWords.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglistWords/Pods-EnglistWords.release.xcconfig"; sourceTree = "<group>"; };
-		D01F5005234249A100B8122D /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		D0825D4C23402FD40041738C /* EnglistWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglistWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0825D4F23402FD40041738C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0825D5123402FD40041738C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,16 @@
 		D0825D6F23402FD80041738C /* EnglistWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglistWordsUITests.swift; sourceTree = "<group>"; };
 		D0825D7123402FD80041738C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0825D7D2340317F0041738C /* VoiceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceDetailController.swift; sourceTree = "<group>"; };
+		D09A952C23439C610045DBD2 /* iconfont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = iconfont.js; sourceTree = "<group>"; };
+		D09A952D23439C610045DBD2 /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
+		D09A952E23439C610045DBD2 /* iconfont.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iconfont.json; sourceTree = "<group>"; };
+		D09A952F23439C610045DBD2 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
+		D09A953023439C610045DBD2 /* iconfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.eot; sourceTree = "<group>"; };
+		D09A953123439C610045DBD2 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		D09A953223439C610045DBD2 /* demo_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo_index.html; sourceTree = "<group>"; };
+		D09A953323439C610045DBD2 /* iconfont.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff2; sourceTree = "<group>"; };
+		D09A953423439C610045DBD2 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
+		D09A953523439C610045DBD2 /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +143,7 @@
 		D0825D4E23402FD40041738C /* EnglistWords */ = {
 			isa = PBXGroup;
 			children = (
+				D09A952B23439C610045DBD2 /* iconfont */,
 				D0825D4F23402FD40041738C /* AppDelegate.swift */,
 				D0825D5123402FD40041738C /* ViewController.swift */,
 				D0825D5323402FD40041738C /* Main.storyboard */,
@@ -132,7 +151,6 @@
 				D0825D5823402FD80041738C /* LaunchScreen.storyboard */,
 				D0825D5B23402FD80041738C /* Info.plist */,
 				D0825D7D2340317F0041738C /* VoiceDetailController.swift */,
-				D01F5005234249A100B8122D /* MoreController.swift */,
 			);
 			path = EnglistWords;
 			sourceTree = "<group>";
@@ -153,6 +171,23 @@
 				D0825D7123402FD80041738C /* Info.plist */,
 			);
 			path = EnglistWordsUITests;
+			sourceTree = "<group>";
+		};
+		D09A952B23439C610045DBD2 /* iconfont */ = {
+			isa = PBXGroup;
+			children = (
+				D09A952C23439C610045DBD2 /* iconfont.js */,
+				D09A952D23439C610045DBD2 /* demo.css */,
+				D09A952E23439C610045DBD2 /* iconfont.json */,
+				D09A952F23439C610045DBD2 /* iconfont.woff */,
+				D09A953023439C610045DBD2 /* iconfont.eot */,
+				D09A953123439C610045DBD2 /* iconfont.ttf */,
+				D09A953223439C610045DBD2 /* demo_index.html */,
+				D09A953323439C610045DBD2 /* iconfont.woff2 */,
+				D09A953423439C610045DBD2 /* iconfont.svg */,
+				D09A953523439C610045DBD2 /* iconfont.css */,
+			);
+			path = iconfont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +297,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0825D5A23402FD80041738C /* LaunchScreen.storyboard in Resources */,
+				D09A953723439C610045DBD2 /* demo.css in Resources */,
+				D09A953D23439C610045DBD2 /* iconfont.woff2 in Resources */,
+				D09A953B23439C610045DBD2 /* iconfont.ttf in Resources */,
+				D09A953A23439C610045DBD2 /* iconfont.eot in Resources */,
 				D0825D5723402FD80041738C /* Assets.xcassets in Resources */,
+				D09A953923439C610045DBD2 /* iconfont.woff in Resources */,
+				D09A953C23439C610045DBD2 /* demo_index.html in Resources */,
+				D09A953F23439C610045DBD2 /* iconfont.css in Resources */,
+				D09A953623439C610045DBD2 /* iconfont.js in Resources */,
 				D0825D5523402FD40041738C /* Main.storyboard in Resources */,
+				D09A953E23439C610045DBD2 /* iconfont.svg in Resources */,
+				D09A953823439C610045DBD2 /* iconfont.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +400,6 @@
 			files = (
 				D0825D7E2340317F0041738C /* VoiceDetailController.swift in Sources */,
 				D0825D5223402FD40041738C /* ViewController.swift in Sources */,
-				D01F5006234249A100B8122D /* MoreController.swift in Sources */,
 				D0825D5023402FD40041738C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = EnglistWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = EnglistWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

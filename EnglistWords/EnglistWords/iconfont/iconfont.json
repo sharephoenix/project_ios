@@ -1,0 +1,44 @@
+{
+  "id": "1443219",
+  "name": "雅思",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "雅思单词app",
+  "glyphs": [
+    {
+      "icon_id": "1024808",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e74e",
+      "unicode_decimal": 59214
+    },
+    {
+      "icon_id": "1024810",
+      "name": "前进",
+      "font_class": "qianjin",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    },
+    {
+      "icon_id": "1447738",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7156146",
+      "name": "暂停",
+      "font_class": "zanting",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "8791337",
+      "name": "擦除",
+      "font_class": "cachu",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    }
+  ]
+}

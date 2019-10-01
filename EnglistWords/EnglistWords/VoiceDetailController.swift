@@ -11,6 +11,7 @@ import WebKit
 import SnapKit
 import ReactiveCocoa
 import ReactiveSwift
+import RxSwift
 import CoreAudio
 import AVFoundation
 
@@ -42,20 +43,22 @@ class VoiceDetailController: UIViewController {
 
     private func createUI() {
         view.addSubview(textFiled)
-        view.addSubview(btn)
         view.addSubview(audioContainer)
+        view.addSubview(clearButton)
+
         audioContainer.addSubview(audioBar)
 
         textFiled.snp.makeConstraints { (make) in
             make.top.equalTo(view.snp.top).offset(view.safeAreaInsets.top)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(-view.safeAreaInsets.bottom)
+            make.height.equalTo(200)
         }
-        btn.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.top).offset(view.safeAreaInsets.top).offset(300)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(44)
+
+        clearButton.snp.makeConstraints { (make) in
+            make.top.equalTo(textFiled.snp.bottom).offset(8)
+            make.centerX.equalToSuperview()
         }
+
         audioContainer.snp.makeConstraints { (make) in
             make.bottom.equalTo(view.snp.bottomMargin)
             make.leading.trailing.equalToSuperview()
@@ -65,6 +68,11 @@ class VoiceDetailController: UIViewController {
             make.edges.equalToSuperview()
         }
 
+        self.audioContainer.setNeedsLayout()
+        self.audioContainer.layoutIfNeeded()
+        self.audioContainer.removeFromSuperview()
+        self.textFiled.inputAccessoryView = self.audioContainer
+
         // 后台播放
         let session = AVAudioSession.sharedInstance()
         try? session.setActive(true, options: AVAudioSession.SetActiveOptions.init())
@@ -72,10 +80,6 @@ class VoiceDetailController: UIViewController {
     }
 
     private func createAction() {
-        btn.reactive.controlEvents(.touchUpInside).observeValues {[weak self] (button) in
-            self?.navigationController?.pushViewController(MoreController(), animated: true)
-        }
-
         audioBar.control.producer.startWithValues { [weak self] (value) in
             guard let `self` = self else { return }
             switch value {
@@ -84,10 +88,16 @@ class VoiceDetailController: UIViewController {
             case .pause:
                 self.avPlayer.pause()
             case .after:
-                print("after")
+                let current = self.avPlayer.currentTime() + CMTime(seconds: 2, preferredTimescale: CMTimeScale(bitPattern: 1000000000))
+                self.avPlayer.seek(to: current)
             case .before:
-                print("before")
-            }
+                let current = self.avPlayer.currentTime() - CMTime(seconds: 2, preferredTimescale: CMTimeScale(bitPattern: 1000000000))
+                self.avPlayer.seek(to: current)            }
+        }
+
+        clearButton.reactive.controlEvents(UIControl.Event.touchUpInside)
+            .observeValues { [weak self]_ in
+                self?.textFiled.text = ""
         }
     }
 
@@ -102,8 +112,11 @@ class VoiceDetailController: UIViewController {
             self.avPlayer = AVPlayer.init(playerItem: playerItem)
         }
         avPlayer.play()
-        audioContainer.setNeedsLayout()
-        audioContainer.layoutIfNeeded()
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        view.endEditing(true)
     }
 
     // MARK: UI
@@ -115,15 +128,21 @@ class VoiceDetailController: UIViewController {
 
     private let textFiled: UITextView = {
         let textFiled = UITextView()
-        textFiled.textColor = .black
-        textFiled.backgroundColor = .white
+        textFiled.textColor = .label
+        textFiled.backgroundColor = .systemBackground
+        textFiled.font = UIFont.systemFont(ofSize: 22)
         textFiled.textAlignment = .left
+        textFiled.keyboardType = .phonePad
         return textFiled
     }()
 
-    private let btn: UIButton = {
+    private let clearButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .blue
+        button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
+        button.setTitle("\u{e72a}", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
+        button.setTitleColor(.blue, for: .focused)
         return button
     }()
 }
@@ -155,17 +174,17 @@ class PlayerTooBar: UIView {
         addSubview(before)
         addSubview(after)
 
-        playButton.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview()
+        before.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()
         }
 
-        before.snp.makeConstraints { (make) in
+        playButton.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
 
         after.snp.makeConstraints { (make) in
-            make.trailing.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
         }
     }
@@ -188,20 +207,23 @@ class PlayerTooBar: UIView {
     // MARK: UI
     private let playButton: UIButton = {
         let button = UIButton()
-        button.setTitle("play", for: UIControl.State.selected)
-        button.setTitle("pause", for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
+        button.setTitle("\u{e618}", for: UIControl.State.selected)
+        button.setTitle("\u{e693}", for: UIControl.State.normal)
         return button
     }()
 
     private let before: UIButton = {
         let button = UIButton()
-        button.setTitle("before", for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
+        button.setTitle("\u{e74e}", for: UIControl.State.normal)
         return button
     }()
 
     private let after: UIButton = {
         let button = UIButton()
-        button.setTitle("after", for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
+        button.setTitle("\u{e750}", for: UIControl.State.normal)
         return button
     }()
 }
