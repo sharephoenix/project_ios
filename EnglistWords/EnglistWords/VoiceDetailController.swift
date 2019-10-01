@@ -132,7 +132,6 @@ class VoiceDetailController: UIViewController {
         textFiled.backgroundColor = .systemBackground
         textFiled.font = UIFont.systemFont(ofSize: 22)
         textFiled.textAlignment = .left
-        textFiled.keyboardType = .phonePad
         return textFiled
     }()
 
