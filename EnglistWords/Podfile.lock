@@ -13,7 +13,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
   - SnapKit (4.2.0)
-  - SwiftSoup (2.2.0)
+  - SwiftSoup (2.2.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -47,7 +47,7 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
+  SwiftSoup: a91d3c96ecb6f8f13005552ef60f9075aae4a7f3
 
 PODFILE CHECKSUM: e487532b5b92564d678053614e3c7285192215f4
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		549A1BAAE53B40BBBE63E708 /* Pods_EnglistWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805B7A41B109C160A3B8E318 /* Pods_EnglistWords.framework */; };
+		D01F5006234249A100B8122D /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01F5005234249A100B8122D /* MoreController.swift */; };
 		D0825D5023402FD40041738C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D4F23402FD40041738C /* AppDelegate.swift */; };
 		D0825D5223402FD40041738C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0825D5123402FD40041738C /* ViewController.swift */; };
 		D0825D5523402FD40041738C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0825D5323402FD40041738C /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		3D9F5E4960EC0B8921112F88 /* Pods-EnglistWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglistWords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnglistWords/Pods-EnglistWords.debug.xcconfig"; sourceTree = "<group>"; };
 		805B7A41B109C160A3B8E318 /* Pods_EnglistWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglistWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5AB1F68B46FF3125D97BD0 /* Pods-EnglistWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglistWords.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnglistWords/Pods-EnglistWords.release.xcconfig"; sourceTree = "<group>"; };
+		D01F5005234249A100B8122D /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		D0825D4C23402FD40041738C /* EnglistWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglistWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0825D4F23402FD40041738C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0825D5123402FD40041738C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D0825D5823402FD80041738C /* LaunchScreen.storyboard */,
 				D0825D5B23402FD80041738C /* Info.plist */,
 				D0825D7D2340317F0041738C /* VoiceDetailController.swift */,
+				D01F5005234249A100B8122D /* MoreController.swift */,
 			);
 			path = EnglistWords;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				D0825D7E2340317F0041738C /* VoiceDetailController.swift in Sources */,
 				D0825D5223402FD40041738C /* ViewController.swift in Sources */,
+				D01F5006234249A100B8122D /* MoreController.swift in Sources */,
 				D0825D5023402FD40041738C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

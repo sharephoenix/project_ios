@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "雅思词汇"
         createUI()
         createData()
     }
@@ -49,6 +50,11 @@ class ViewController: UIViewController {
         }
         tableView.reloadData()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -58,18 +64,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.contentView.backgroundColor = .white
         cell?.selectionStyle = .none
         cell?.textLabel?.textColor = .black
-        cell?.textLabel?.text = "WordList\(indexPath.row)"
+        cell?.textLabel?.text = getIdentifier(index: indexPath.row)
         return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let url = voiceList[indexPath.row]
-        navigationController?.pushViewController(VoiceDetailController(url: url, title: "WordList\(indexPath.row)"), animated: true)
+        navigationController?.pushViewController(VoiceDetailController(url: url, title: getIdentifier(index: indexPath.row)), animated: true)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+
+    private func getIdentifier(index: Int) -> String{
+        return "WordList\(index + 1)"
     }
 }
