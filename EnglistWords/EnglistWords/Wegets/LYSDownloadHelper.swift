@@ -44,7 +44,6 @@ class LYSDownloadHelper: NSObject, URLSessionDownloadDelegate {
         } else {
             callbacks[url] = NSMutableArray(object: callBack)
         }
-        print("--")
     }
 
     // 下载代理方法，下载结束
