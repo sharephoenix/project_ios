@@ -28,16 +28,12 @@ class LYSFileManager: NSObject {
         return getDocument()
     }
 
-    func convertPath(path: URL, realtivePath: String, newName: String = "a.mp3") {
+    func convertPath(path: URL, realtivePath: String, newName: String) {
         let document = getDocument()
         let redirpath = document + realtivePath
-        let a = manager.fileExists(atPath: redirpath)
-        if !a {
+        if !manager.fileExists(atPath: redirpath) {
             try? manager.createDirectory(at: URL(fileURLWithPath: redirpath), withIntermediateDirectories: true, attributes: nil)
-            print("-----")
         }
         try? manager.moveItem(at: path, to: URL.init(fileURLWithPath: redirpath + "/" + newName))
-
-        print("------")
     }
 }

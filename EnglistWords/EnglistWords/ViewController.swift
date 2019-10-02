@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "雅思词汇"
+        view.backgroundColor = .systemBackground
         createUI()
         createData()
-        for f in UIFont.familyNames {
-            print("familyNames: \(f)")
-            for s in UIFont.fontNames(forFamilyName: f) {
-                print("ffff::: \(s)")
-            }
+
+        let link = "http://download.dogwood.com.cn/online/yschlx/WordList41.mp3"
+        LYSDownloadHelper.instance.registCallBack(url: URL(string: link)!) { (process, uurl) in
+            print(".........::\(process)")
         }
     }
 

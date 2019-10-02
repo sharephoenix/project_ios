@@ -38,7 +38,7 @@ class VoiceDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = navTitle
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemBackground
         createUI()
         createAction()
         reStart()
@@ -138,11 +138,8 @@ class VoiceDetailController: UIViewController {
             return
         }
         createAVPlayer(filePath: nil)
-        task = LYSDownloadHelper.instance.downloadFile(url: URL(string: url)!) { [weak self] (process, location) in
-            guard let `self` = self else { return }
-            if let location = location {
-                LYSFileManager.instance.convertPath(path: location, realtivePath: "/audio", newName: self.navTitle + ".mp3")
-            }
+        task = LYSDownloadHelper.instance.downloadFile(url: URL(string: url)!, relativePath: "/audio", newName: self.navTitle + ".mp3") { (process, location) in
+            print("process:\(process)")
         }
     }
 
@@ -164,6 +161,9 @@ class VoiceDetailController: UIViewController {
         textFiled.backgroundColor = .systemBackground
         textFiled.font = UIFont.systemFont(ofSize: 22)
         textFiled.textAlignment = .left
+        textFiled.text = "语音输入，看看手机是否能正确翻译"
+        textFiled.layer.borderColor = UIColor.lightGray.cgColor
+        textFiled.layer.borderWidth = 1
         return textFiled
     }()
 
@@ -171,7 +171,7 @@ class VoiceDetailController: UIViewController {
         let button = UIButton()
         button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
         button.setTitle("\u{e72a}", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.label, for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.setTitleColor(.blue, for: .focused)
         return button
@@ -181,8 +181,7 @@ class VoiceDetailController: UIViewController {
         let button = UIButton()
         button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
         button.setTitle("\u{e7b8}", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.setTitleColor(.blue, for: .highlighted)
+        button.setTitleColor(.label, for: .normal)
         button.setTitleColor(.blue, for: .focused)
         return button
     }()
