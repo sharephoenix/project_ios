@@ -182,6 +182,7 @@ class VoiceDetailController: UIViewController {
         button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
         button.setTitle("\u{e7b8}", for: .normal)
         button.setTitleColor(.label, for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
         button.setTitleColor(.blue, for: .focused)
         return button
     }()
