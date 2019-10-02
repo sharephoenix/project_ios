@@ -21,6 +21,9 @@ class VoiceDetailController: UIViewController {
     private let navTitle: String
     private var avPlayer = AVPlayer()
     private let audioBar = PlayerTooBar()
+    private var task: URLSessionDownloadTask?
+
+    private let saveFolder = "/audio"
 
     init(url: String, title: String) {
         self.url = url
@@ -38,14 +41,14 @@ class VoiceDetailController: UIViewController {
         view.backgroundColor = .lightGray
         createUI()
         createAction()
-        createAVPlayer()
+        reStart()
     }
 
     private func createUI() {
         view.addSubview(textFiled)
         view.addSubview(audioContainer)
         view.addSubview(clearButton)
-
+        view.addSubview(reStartButton)
         audioContainer.addSubview(audioBar)
 
         textFiled.snp.makeConstraints { (make) in
@@ -57,6 +60,11 @@ class VoiceDetailController: UIViewController {
         clearButton.snp.makeConstraints { (make) in
             make.top.equalTo(textFiled.snp.bottom).offset(8)
             make.centerX.equalToSuperview()
+        }
+
+        reStartButton.snp.makeConstraints { (make) in
+            make.top.equalTo(textFiled.snp.bottom).offset(8)
+            make.leading.equalTo(clearButton.snp.trailing).offset(8)
         }
 
         audioContainer.snp.makeConstraints { (make) in
@@ -72,11 +80,6 @@ class VoiceDetailController: UIViewController {
         self.audioContainer.layoutIfNeeded()
         self.audioContainer.removeFromSuperview()
         self.textFiled.inputAccessoryView = self.audioContainer
-
-        // 后台播放
-        let session = AVAudioSession.sharedInstance()
-        try? session.setActive(true, options: AVAudioSession.SetActiveOptions.init())
-        try? session.setCategory(AVAudioSession.Category.playback)
     }
 
     private func createAction() {
@@ -99,19 +102,48 @@ class VoiceDetailController: UIViewController {
             .observeValues { [weak self]_ in
                 self?.textFiled.text = ""
         }
+
+        reStartButton.reactive.controlEvents(UIControl.Event.touchUpInside)
+            .observeValues { [weak self]_ in
+                self?.reStart()
+        }
+
     }
 
-    private func createAVPlayer() {
-        guard let playerUrl = URL(string: self.url) else {
-            return
+    /// 自动创建并播放
+    private func createAVPlayer(filePath: String?) {
+        var playerUrl: URL?
+        if filePath == nil {
+            playerUrl = URL(string: self.url)
+        } else {
+            playerUrl = URL(fileURLWithPath: filePath!)
         }
-        let playerItem = AVPlayerItem(url: playerUrl)
+        guard let currentUrl = playerUrl else { return }
+
+        let playerItem = AVPlayerItem(url: currentUrl)
         if self.avPlayer.status == .readyToPlay {
             self.avPlayer.replaceCurrentItem(with: playerItem)
         } else {
             self.avPlayer = AVPlayer.init(playerItem: playerItem)
         }
         avPlayer.play()
+    }
+
+    /// 重新播放
+    private func reStart() {
+        avPlayer.pause()
+        if LYSFileManager.instance.isExist(relativePath: saveFolder, fileName: "\(navTitle).mp3") {
+            let filePath = LYSFileManager.instance.getDocument() + "\(saveFolder)/\(navTitle).mp3"
+            createAVPlayer(filePath: filePath)
+            return
+        }
+        createAVPlayer(filePath: nil)
+        task = LYSDownloadHelper.instance.downloadFile(url: URL(string: url)!) { [weak self] (process, location) in
+            guard let `self` = self else { return }
+            if let location = location {
+                LYSFileManager.instance.convertPath(path: location, realtivePath: "/audio", newName: self.navTitle + ".mp3")
+            }
+        }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -139,6 +171,16 @@ class VoiceDetailController: UIViewController {
         let button = UIButton()
         button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
         button.setTitle("\u{e72a}", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.blue, for: .highlighted)
+        button.setTitleColor(.blue, for: .focused)
+        return button
+    }()
+
+    private let reStartButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont(name: "iconfont", size: 22)
+        button.setTitle("\u{e7b8}", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.setTitleColor(.blue, for: .highlighted)
         button.setTitleColor(.blue, for: .focused)

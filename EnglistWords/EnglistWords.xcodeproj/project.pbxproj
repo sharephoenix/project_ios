@@ -26,6 +26,8 @@
 		D09A953D23439C610045DBD2 /* iconfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D09A953323439C610045DBD2 /* iconfont.woff2 */; };
 		D09A953E23439C610045DBD2 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = D09A953423439C610045DBD2 /* iconfont.svg */; };
 		D09A953F23439C610045DBD2 /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = D09A953523439C610045DBD2 /* iconfont.css */; };
+		D09A954223443AF70045DBD2 /* LYSDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A954123443AF70045DBD2 /* LYSDownloadHelper.swift */; };
+		D09A954423444FF30045DBD2 /* LYSFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A954323444FF30045DBD2 /* LYSFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D09A953323439C610045DBD2 /* iconfont.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff2; sourceTree = "<group>"; };
 		D09A953423439C610045DBD2 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
 		D09A953523439C610045DBD2 /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
+		D09A954123443AF70045DBD2 /* LYSDownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYSDownloadHelper.swift; sourceTree = "<group>"; };
+		D09A954323444FF30045DBD2 /* LYSFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYSFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		D0825D4E23402FD40041738C /* EnglistWords */ = {
 			isa = PBXGroup;
 			children = (
+				D09A954023443AC70045DBD2 /* Wegets */,
 				D09A952B23439C610045DBD2 /* iconfont */,
 				D0825D4F23402FD40041738C /* AppDelegate.swift */,
 				D0825D5123402FD40041738C /* ViewController.swift */,
@@ -188,6 +193,15 @@
 				D09A953523439C610045DBD2 /* iconfont.css */,
 			);
 			path = iconfont;
+			sourceTree = "<group>";
+		};
+		D09A954023443AC70045DBD2 /* Wegets */ = {
+			isa = PBXGroup;
+			children = (
+				D09A954123443AF70045DBD2 /* LYSDownloadHelper.swift */,
+				D09A954323444FF30045DBD2 /* LYSFileManager.swift */,
+			);
+			path = Wegets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +414,8 @@
 			files = (
 				D0825D7E2340317F0041738C /* VoiceDetailController.swift in Sources */,
 				D0825D5223402FD40041738C /* ViewController.swift in Sources */,
+				D09A954223443AF70045DBD2 /* LYSDownloadHelper.swift in Sources */,
+				D09A954423444FF30045DBD2 /* LYSFileManager.swift in Sources */,
 				D0825D5023402FD40041738C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

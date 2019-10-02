@@ -6,6 +6,13 @@
   "description": "雅思单词app",
   "glyphs": [
     {
+      "icon_id": "212776",
+      "name": "restart ",
+      "font_class": "restart",
+      "unicode": "ea39",
+      "unicode_decimal": 59961
+    },
+    {
       "icon_id": "1024808",
       "name": "后退",
       "font_class": "houtui",
@@ -25,6 +32,13 @@
       "font_class": "bofang",
       "unicode": "e618",
       "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "4430546",
+      "name": "重新加载",
+      "font_class": "zhongxinjiazai",
+      "unicode": "e7b8",
+      "unicode_decimal": 59320
     },
     {
       "icon_id": "7156146",
