@@ -8,7 +8,13 @@
 
 import UIKit
 import SnapKit
-
+//新1 词汇2900 水平小学到初中 对应考试剑桥少儿英语2级
+//
+//新2 词汇3000 水平高考 对应考试剑桥通用英语证书PET 雅思3.5
+//
+//新3 词汇4500 水平大学四级 对应考试剑桥通用英语证书PCE 雅思6.5
+//
+//新4 词汇6000 水平大学六级 对应考试新托福100分 雅思7.5
 class ViewController: UIViewController {
 
     private var voiceList = [String]()
