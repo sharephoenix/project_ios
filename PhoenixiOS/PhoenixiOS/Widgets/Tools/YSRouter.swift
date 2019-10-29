@@ -60,4 +60,10 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    /// 换肤
+    static func showSkinController(_ navigationController: UINavigationController?) {
+        let vc = YSSkinController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

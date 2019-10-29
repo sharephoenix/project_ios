@@ -31,6 +31,9 @@
 		186B32D72303B09100856A08 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D42303B09100856A08 /* CModel.c */; };
 		186B32D82303B09100856A08 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D52303B09100856A08 /* CPPerson.cpp */; };
 		186B32DA2303B21300856A08 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 186B32D92303B21300856A08 /* README.MD */; };
+		189D8F5C23683932009957CA /* SkinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5B23683932009957CA /* SkinManager.swift */; };
+		189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5D236839CA009957CA /* YSSkinController.swift */; };
+		189D8F60236850DB009957CA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5F236850DB009957CA /* ViewExtension.swift */; };
 		18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A95230152F600FCB04F /* YSSwitch.swift */; };
 		18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A982301556500FCB04F /* YSSwitchController.swift */; };
 		18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD5A9B230156A200FCB04F /* YSMainCell.swift */; };
@@ -106,6 +109,9 @@
 		186B32D52303B09100856A08 /* CPPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPerson.cpp; sourceTree = "<group>"; };
 		186B32D62303B09100856A08 /* CBridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBridging.h; sourceTree = "<group>"; };
 		186B32D92303B21300856A08 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		189D8F5B23683932009957CA /* SkinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinManager.swift; sourceTree = "<group>"; };
+		189D8F5D236839CA009957CA /* YSSkinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSkinController.swift; sourceTree = "<group>"; };
+		189D8F5F236850DB009957CA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		18DD5A95230152F600FCB04F /* YSSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSSwitch.swift; sourceTree = "<group>"; };
 		18DD5A982301556500FCB04F /* YSSwitchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSwitchController.swift; sourceTree = "<group>"; };
 		18DD5A9B230156A200FCB04F /* YSMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSMainCell.swift; sourceTree = "<group>"; };
@@ -290,9 +296,20 @@
 			path = "混编";
 			sourceTree = "<group>";
 		};
+		189D8F5A2368390E009957CA /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				189D8F5B23683932009957CA /* SkinManager.swift */,
+				189D8F5D236839CA009957CA /* YSSkinController.swift */,
+				189D8F5F236850DB009957CA /* ViewExtension.swift */,
+			);
+			path = Skin;
+			sourceTree = "<group>";
+		};
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				189D8F5A2368390E009957CA /* Skin */,
 				D0825D3E233720510041738C /* FirstResponder */,
 				D0825D3B233713F60041738C /* GuideCase */,
 				1807ADF4230E9CB700082C94 /* HtmlParse */,
@@ -615,6 +632,7 @@
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
 				D0825D40233720810041738C /* GetResponderController.swift in Sources */,
+				189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */,
 				D0825D3A233712580041738C /* GuideMaskView.swift in Sources */,
 				186B32D82303B09100856A08 /* CPPerson.cpp in Sources */,
 				18DD5AA323027E2300FCB04F /* YSRouter.swift in Sources */,
@@ -624,7 +642,9 @@
 				1805725023064A84000565AF /* YSQRImageBuffer.mm in Sources */,
 				1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */,
 				18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */,
+				189D8F60236850DB009957CA /* ViewExtension.swift in Sources */,
 				1805720F2303E05C000565AF /* YSButton.swift in Sources */,
+				189D8F5C23683932009957CA /* SkinManager.swift in Sources */,
 				18DD5AAD230282A700FCB04F /* YSColorManager.swift in Sources */,
 				D0825D39233712580041738C /* GuideManager.swift in Sources */,
 				1805727423069266000565AF /* YSSystemQR.swift in Sources */,
