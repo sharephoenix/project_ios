@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,11 @@
 		1807ADEF230E388D00082C94 /* YSVideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADEE230E388D00082C94 /* YSVideoPlayerController.swift */; };
 		1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADF0230E441B00082C94 /* YSVideoPlayerTools.swift */; };
 		1807ADF6230E9CD000082C94 /* HtmlTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807ADF5230E9CD000082C94 /* HtmlTools.swift */; };
+		18331BF2245406CC0036F2E1 /* SqlitSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331BF1245406CC0036F2E1 /* SqlitSwiftController.swift */; };
+		18331BF62454082A0036F2E1 /* PMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331BF52454082A0036F2E1 /* PMainController.swift */; };
+		18331BF824540E2E0036F2E1 /* PControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331BF724540E2E0036F2E1 /* PControllerManager.swift */; };
+		18331BFB24540ECC0036F2E1 /* PHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331BFA24540ECB0036F2E1 /* PHomeController.swift */; };
+		18331BFE245411900036F2E1 /* PBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331BFD245411900036F2E1 /* PBaseController.swift */; };
 		186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7122E1623D003EE67A /* AppDelegate.swift */; };
 		186A3A7422E1623D003EE67A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A3A7322E1623D003EE67A /* ViewController.swift */; };
 		186A3A7722E1623D003EE67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186A3A7522E1623D003EE67A /* Main.storyboard */; };
@@ -31,6 +36,7 @@
 		186B32D72303B09100856A08 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D42303B09100856A08 /* CModel.c */; };
 		186B32D82303B09100856A08 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D52303B09100856A08 /* CPPerson.cpp */; };
 		186B32DA2303B21300856A08 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 186B32D92303B21300856A08 /* README.MD */; };
+		188F066524650D3600CCB5BC /* RunloopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F066424650D3600CCB5BC /* RunloopController.m */; };
 		189D8F5C23683932009957CA /* SkinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5B23683932009957CA /* SkinManager.swift */; };
 		189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5D236839CA009957CA /* YSSkinController.swift */; };
 		189D8F60236850DB009957CA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5F236850DB009957CA /* ViewExtension.swift */; };
@@ -89,6 +95,11 @@
 		1807ADEE230E388D00082C94 /* YSVideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoPlayerController.swift; sourceTree = "<group>"; };
 		1807ADF0230E441B00082C94 /* YSVideoPlayerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSVideoPlayerTools.swift; sourceTree = "<group>"; };
 		1807ADF5230E9CD000082C94 /* HtmlTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlTools.swift; sourceTree = "<group>"; };
+		18331BF1245406CC0036F2E1 /* SqlitSwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlitSwiftController.swift; sourceTree = "<group>"; };
+		18331BF52454082A0036F2E1 /* PMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMainController.swift; sourceTree = "<group>"; };
+		18331BF724540E2E0036F2E1 /* PControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PControllerManager.swift; sourceTree = "<group>"; };
+		18331BFA24540ECB0036F2E1 /* PHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHomeController.swift; sourceTree = "<group>"; };
+		18331BFD245411900036F2E1 /* PBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBaseController.swift; sourceTree = "<group>"; };
 		186A3A6E22E1623D003EE67A /* PhoenixiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A3A7122E1623D003EE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186A3A7322E1623D003EE67A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +120,8 @@
 		186B32D52303B09100856A08 /* CPPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPerson.cpp; sourceTree = "<group>"; };
 		186B32D62303B09100856A08 /* CBridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBridging.h; sourceTree = "<group>"; };
 		186B32D92303B21300856A08 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		188F066324650D3600CCB5BC /* RunloopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopController.h; sourceTree = "<group>"; };
+		188F066424650D3600CCB5BC /* RunloopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopController.m; sourceTree = "<group>"; };
 		189D8F5B23683932009957CA /* SkinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinManager.swift; sourceTree = "<group>"; };
 		189D8F5D236839CA009957CA /* YSSkinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSkinController.swift; sourceTree = "<group>"; };
 		189D8F5F236850DB009957CA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -213,6 +226,49 @@
 			path = HtmlParse;
 			sourceTree = "<group>";
 		};
+		18331BF0245406A70036F2E1 /* SqliteSwiftController */ = {
+			isa = PBXGroup;
+			children = (
+				18331BF1245406CC0036F2E1 /* SqlitSwiftController.swift */,
+			);
+			path = SqliteSwiftController;
+			sourceTree = "<group>";
+		};
+		18331BF3245407C80036F2E1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				18331BFC245411760036F2E1 /* Base */,
+				18331BF924540EAE0036F2E1 /* HomeController */,
+				18331BF0245406A70036F2E1 /* SqliteSwiftController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		18331BF4245407F30036F2E1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18331BF52454082A0036F2E1 /* PMainController.swift */,
+				18331BF724540E2E0036F2E1 /* PControllerManager.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		18331BF924540EAE0036F2E1 /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				18331BFA24540ECB0036F2E1 /* PHomeController.swift */,
+			);
+			path = HomeController;
+			sourceTree = "<group>";
+		};
+		18331BFC245411760036F2E1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				18331BFD245411900036F2E1 /* PBaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		186A3A6522E1623C003EE67A = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +294,9 @@
 		186A3A7022E1623D003EE67A /* PhoenixiOS */ = {
 			isa = PBXGroup;
 			children = (
+				188F066224650D1200CCB5BC /* demo */,
+				18331BF4245407F30036F2E1 /* Main */,
+				18331BF3245407C80036F2E1 /* UI */,
 				D0825D3123370F390041738C /* UTools */,
 				18DD5AA82302808700FCB04F /* views */,
 				18DD5A9A2301567900FCB04F /* components */,
@@ -294,6 +353,15 @@
 				186B32D22303B09100856A08 /* CPPerson.hpp */,
 			);
 			path = "混编";
+			sourceTree = "<group>";
+		};
+		188F066224650D1200CCB5BC /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				188F066324650D3600CCB5BC /* RunloopController.h */,
+				188F066424650D3600CCB5BC /* RunloopController.m */,
+			);
+			path = demo;
 			sourceTree = "<group>";
 		};
 		189D8F5A2368390E009957CA /* Skin */ = {
@@ -583,38 +651,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -625,12 +670,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */,
+				188F066524650D3600CCB5BC /* RunloopController.m in Sources */,
 				18DD5AA723027F0E00FCB04F /* YSTabBarController.swift in Sources */,
 				D0825D3D233714180041738C /* GuideController.swift in Sources */,
 				1805721D23043BCE000565AF /* YSToast.swift in Sources */,
 				186A3A7422E1623D003EE67A /* ViewController.swift in Sources */,
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
+				18331BFE245411900036F2E1 /* PBaseController.swift in Sources */,
 				D0825D40233720810041738C /* GetResponderController.swift in Sources */,
 				189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */,
 				D0825D3A233712580041738C /* GuideMaskView.swift in Sources */,
@@ -639,7 +686,9 @@
 				186B32D72303B09100856A08 /* CModel.c in Sources */,
 				1807ADEA2306BC4900082C94 /* YSVideoRtmpController.swift in Sources */,
 				18DD5AA023027D2A00FCB04F /* YSBaseController.swift in Sources */,
+				18331BF62454082A0036F2E1 /* PMainController.swift in Sources */,
 				1805725023064A84000565AF /* YSQRImageBuffer.mm in Sources */,
+				18331BF824540E2E0036F2E1 /* PControllerManager.swift in Sources */,
 				1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */,
 				18DD5A96230152F600FCB04F /* YSSwitch.swift in Sources */,
 				189D8F60236850DB009957CA /* ViewExtension.swift in Sources */,
@@ -651,7 +700,9 @@
 				D0825D3323370F620041738C /* SystemTool.swift in Sources */,
 				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
+				18331BFB24540ECC0036F2E1 /* PHomeController.swift in Sources */,
 				1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */,
+				18331BF2245406CC0036F2E1 /* SqlitSwiftController.swift in Sources */,
 				180572042303C10D000565AF /* TestCC.cpp in Sources */,
 				1805720A2303C1AB000565AF /* YSFile.mm in Sources */,
 				180572142303E15D000565AF /* YSButtonController.swift in Sources */,

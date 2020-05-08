@@ -66,4 +66,11 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    /// 运行时 Runloop
+    static func showRunloopController(_ navigationController: UINavigationController?) {
+        let vc = RunloopController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
