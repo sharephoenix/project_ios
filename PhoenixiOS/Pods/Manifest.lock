@@ -1,5 +1,12 @@
 PODS:
   - Alamofire (4.9.1)
+  - FBRetainCycleDetector (0.1.4)
+  - Kingfisher (4.10.1)
+  - Masonry (1.1.0)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - PinLayout (1.8.13)
+  - Pinyin4Swift (1.1.1)
   - ReactiveCocoa (10.2.0):
     - ReactiveSwift (~> 6.2)
   - ReactiveSwift (6.2.1)
@@ -14,16 +21,32 @@ PODS:
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - SwiftSoup (2.3.1)
+  - YSToast (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
+  - Kingfisher (~> 4.10.1)
+  - Masonry
+  - MLeaksFinder
+  - PinLayout
+  - Pinyin4Swift
   - ReactiveCocoa
   - RxCocoa
+  - RxSwift
   - SnapKit
   - SQLite.swift (~> 0.12.2)
   - SwiftSoup
+  - YSToast
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FBRetainCycleDetector
+    - Kingfisher
+    - Masonry
+    - MLeaksFinder
+    - PinLayout
+    - Pinyin4Swift
+    - YSToast
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Alamofire
     - ReactiveCocoa
@@ -37,6 +60,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  PinLayout: e41a50260a76508b7a7fcee8955c76639adc69bc
+  Pinyin4Swift: 09c0ecc0419373836c20f14da569b27b58ce8481
   ReactiveCocoa: a123c42f449c552460a4ee217dd49c76a17c8204
   ReactiveSwift: 07ddf579f4eb3ee3bd656214f0461aaf2c0fd639
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -45,7 +74,8 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftSoup: e5af192bc99be8398d5f93e15ff6a3c80ba81de1
+  YSToast: d09f5344dd3599b0be9f671049b1a053543814a4
 
-PODFILE CHECKSUM: 7f69a652eca10f0ea3a72834393d9d31e1694eda
+PODFILE CHECKSUM: fe7eff87769f92bf69b048e3a2646f2c0498c99a
 
 COCOAPODS: 1.9.1
