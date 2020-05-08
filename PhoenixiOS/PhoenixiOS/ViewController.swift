@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         let ysFirstResponder = YSMainViewModel(name: "YSFistResponder")
         let ysSkin = YSMainViewModel(name: "showSkinController")
         let ysRunloop = YSMainViewModel(name: "RunloopController")
+        let sqlitLite = YSMainViewModel(name: "YSSQLiteController")
         datas.append(ysSwitch)
         datas.append(ysButton)
         datas.append(ysToast)
@@ -82,6 +83,7 @@ class ViewController: UIViewController {
         datas.append(ysFirstResponder)
         datas.append(ysSkin)
         datas.append(ysRunloop)
+        datas.append(sqlitLite)
     }
 
     private func createUI() {
@@ -156,6 +158,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if viewModel.name == "RunloopController" {
             YSRouter.showRunloopController(navigationController)
+        }
+        if viewModel.name == "YSSQLiteController" {
+            YSRouter.showYSSQLiteController(navigationController)
         }
 
         let cell = tableView.cellForRow(at: indexPath)

@@ -21,6 +21,7 @@ target 'PhoenixiOS' do
     pod 'Pinyin4Swift'
     pod 'Masonry'
     pod 'MLeaksFinder'
+    pod 'SQLite.swift'
 end
 
 

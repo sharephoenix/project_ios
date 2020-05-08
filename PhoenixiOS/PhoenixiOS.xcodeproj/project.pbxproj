@@ -37,6 +37,9 @@
 		186B32D82303B09100856A08 /* CPPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186B32D52303B09100856A08 /* CPPerson.cpp */; };
 		186B32DA2303B21300856A08 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 186B32D92303B21300856A08 /* README.MD */; };
 		188F066524650D3600CCB5BC /* RunloopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F066424650D3600CCB5BC /* RunloopController.m */; };
+		188F067124655B7D00CCB5BC /* YSSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F067024655B7D00CCB5BC /* YSSQLiteManager.swift */; };
+		188F067324655D6C00CCB5BC /* YSSQLiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F067224655D6C00CCB5BC /* YSSQLiteController.swift */; };
+		188F0675246573DB00CCB5BC /* YSSQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F0674246573DB00CCB5BC /* YSSQLiteDatabase.swift */; };
 		189D8F5C23683932009957CA /* SkinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5B23683932009957CA /* SkinManager.swift */; };
 		189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5D236839CA009957CA /* YSSkinController.swift */; };
 		189D8F60236850DB009957CA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5F236850DB009957CA /* ViewExtension.swift */; };
@@ -122,6 +125,9 @@
 		186B32D92303B21300856A08 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		188F066324650D3600CCB5BC /* RunloopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopController.h; sourceTree = "<group>"; };
 		188F066424650D3600CCB5BC /* RunloopController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopController.m; sourceTree = "<group>"; };
+		188F067024655B7D00CCB5BC /* YSSQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteManager.swift; sourceTree = "<group>"; };
+		188F067224655D6C00CCB5BC /* YSSQLiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteController.swift; sourceTree = "<group>"; };
+		188F0674246573DB00CCB5BC /* YSSQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteDatabase.swift; sourceTree = "<group>"; };
 		189D8F5B23683932009957CA /* SkinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinManager.swift; sourceTree = "<group>"; };
 		189D8F5D236839CA009957CA /* YSSkinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSkinController.swift; sourceTree = "<group>"; };
 		189D8F5F236850DB009957CA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -358,10 +364,29 @@
 		188F066224650D1200CCB5BC /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				188F066F24655A8200CCB5BC /* SQLiteSwift */,
+				188F066E24655A7100CCB5BC /* Runloop */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		188F066E24655A7100CCB5BC /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
 				188F066324650D3600CCB5BC /* RunloopController.h */,
 				188F066424650D3600CCB5BC /* RunloopController.m */,
 			);
-			path = demo;
+			path = Runloop;
+			sourceTree = "<group>";
+		};
+		188F066F24655A8200CCB5BC /* SQLiteSwift */ = {
+			isa = PBXGroup;
+			children = (
+				188F067024655B7D00CCB5BC /* YSSQLiteManager.swift */,
+				188F067224655D6C00CCB5BC /* YSSQLiteController.swift */,
+				188F0674246573DB00CCB5BC /* YSSQLiteDatabase.swift */,
+			);
+			path = SQLiteSwift;
 			sourceTree = "<group>";
 		};
 		189D8F5A2368390E009957CA /* Skin */ = {
@@ -678,6 +703,7 @@
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
 				18331BFE245411900036F2E1 /* PBaseController.swift in Sources */,
+				188F067324655D6C00CCB5BC /* YSSQLiteController.swift in Sources */,
 				D0825D40233720810041738C /* GetResponderController.swift in Sources */,
 				189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */,
 				D0825D3A233712580041738C /* GuideMaskView.swift in Sources */,
@@ -701,10 +727,12 @@
 				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
 				18331BFB24540ECC0036F2E1 /* PHomeController.swift in Sources */,
+				188F0675246573DB00CCB5BC /* YSSQLiteDatabase.swift in Sources */,
 				1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */,
 				18331BF2245406CC0036F2E1 /* SqlitSwiftController.swift in Sources */,
 				180572042303C10D000565AF /* TestCC.cpp in Sources */,
 				1805720A2303C1AB000565AF /* YSFile.mm in Sources */,
+				188F067124655B7D00CCB5BC /* YSSQLiteManager.swift in Sources */,
 				180572142303E15D000565AF /* YSButtonController.swift in Sources */,
 				1807ADEF230E388D00082C94 /* YSVideoPlayerController.swift in Sources */,
 				1807ADF6230E9CD000082C94 /* HtmlTools.swift in Sources */,

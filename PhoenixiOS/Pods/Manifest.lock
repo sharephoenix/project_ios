@@ -34,9 +34,10 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SnapKit
+  - SQLite.swift
   - SQLite.swift (~> 0.12.2)
   - SwiftSoup
-  - YSToast
+  - YSToast (~> 1.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -76,6 +77,6 @@ SPEC CHECKSUMS:
   SwiftSoup: e5af192bc99be8398d5f93e15ff6a3c80ba81de1
   YSToast: d09f5344dd3599b0be9f671049b1a053543814a4
 
-PODFILE CHECKSUM: fe7eff87769f92bf69b048e3a2646f2c0498c99a
+PODFILE CHECKSUM: da8c4d8a6045b9294be116e2a12047796c4b51cc
 
 COCOAPODS: 1.9.1
