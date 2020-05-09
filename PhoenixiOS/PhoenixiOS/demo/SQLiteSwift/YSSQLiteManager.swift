@@ -11,13 +11,18 @@ import SQLite3
 import SQLite
 
 class YSSQLiteManager: NSObject {
+
+    enum YSSQLiteError: Error {
+        case onError(value: String)
+    }
+
     static var instance = YSSQLiteManager()
     private override init() {}
 
     @discardableResult
-    func createTable() throws -> Statement? {
+    func createTable() throws -> Statement {
         guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
         }
         let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
         let users = Table("users")
@@ -25,93 +30,91 @@ class YSSQLiteManager: NSObject {
         let name = Expression<String?>("name")
         let email = Expression<String>("email")
         let age = Expression<Int64>("age")
-        db.rollbackHook {
-            print("rollback")
-        }
 
-        try db.run(users.create { t in
+        let statement = try db.run(users.create(temporary: false, ifNotExists: true) { t in
             t.column(id, primaryKey: true)
             t.column(name)
             t.column(age)
-            t.column(email, unique: true)
+            t.column(email)
+//            t.column(email, unique: true)
         })
-//         CREATE TABLE "users" (
-//             "id" INTEGER PRIMARY KEY NOT NULL,
-//             "name" TEXT,
-//             "email" TEXT NOT NULL UNIQUE
-//         )
-
-        // SELECT * FROM "users"
-
-        let alice = users.filter(id == rowid)
-
-        try db.run(alice.update(email <- email.replace("mac.com", with: "me.com")))
-        // UPDATE "users" SET "email" = replace("email", 'mac.com', 'me.com')
-        // WHERE ("id" = 1)
-
-        try db.run(alice.delete())
-//        // DELETE FROM "users" WHERE ("id" = 1)
-
-        let b = try db.scalar(users.count) // 0
-        print("\(b)")
-        // SELECT count(*) FROM "users"
-        return nil
+        return statement
     }
 
-    func insertData() throws -> Statement? {
+    /// 返回 数据总条目数
+    @discardableResult
+    func insertData() throws -> Int64 {
         guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
         }
         let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
         let users = YSSQLiteDatabase.instance.userTable.users
-        let id = YSSQLiteDatabase.instance.userTable.id
         let name = YSSQLiteDatabase.instance.userTable.name
         let email = YSSQLiteDatabase.instance.userTable.email
+        let age = Expression<Int64>("age")
 
-        let insert = users.insert(name <- "Alice", email <- "alice@mac.com")
+        let insert = users.insert(name <- "Alice", email <- "alice@mac.com", age <- 22)
         let rowid = try db.run(insert)
-        // INSERT INTO "users" ("name", "email") VALUES ('Alice', 'alice@mac.com')
-        let prepare = try db.prepare(users)
-        for user in prepare {
-            print("id: \(user[id]), name: \(String(describing: user[name])), email: \(user[email])")
-            // id: 1, name: Optional("Alice"), email: alice@mac.com
-        }
-        return nil
+        return rowid
     }
 
-    func selectData(data: inout [String]) throws -> Statement? {
+    /// 返回查询到的数据
+    @discardableResult
+    func selectData() throws -> [String] {
         guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
         }
         let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
         let users = Table("users")
         let id = Expression<Int64>("id")
         let name = Expression<String?>("name")
         let email = Expression<String>("email")
+        let age = Expression<Int64>("age")
 
         let prepare = try db.prepare(users)
+        var data: [String] = [String]()
+
         for user in prepare {
-            data.append("id: \(user[id]), name: \(String(describing: user[name])), email: \(user[email])")
-            // id: 1, name: Optional("Alice"), email: alice@mac.com
+            data.append("id: \(user[id]), name: \(String(describing: user[name])), email: \(user[email]), age: \(user[age])")
         }
-        return nil
+        return data
     }
 
-    func updateData() throws -> Statement? {
+    /// 更新总记录数
+    @discardableResult
+    func updateData() throws -> Int {
         guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
         }
         let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
         let users = Table("users")
-        let id = Expression<Int64>("id")
         let name = Expression<String?>("name")
         let email = Expression<String>("email")
+        let alice = users.filter(email == "alice@mac.com")
+        return try db.run(alice.update(email <- email.replace("me.com", with: "mac.com"), name <- "alex"))
+    }
 
+    /// 删除中记录数
+    @discardableResult
+    func deleteAllData() throws -> Int {
+        guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
+        }
+        let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
+        let users = Table("users")
+        let name = Expression<String?>("name")
+        let alice = users.filter(name == "alex")
+        return try db.run(alice.delete())
+    }
 
-        let alice = users.filter(id == rowid)
-        try db.run(alice.update(email <- email.replace("mac.com", with: "me.com")))
-        // UPDATE "users" SET "email" = replace("email", 'mac.com', 'me.com')
-        // WHERE ("id" = 1)
-        return nil
+    /// 删除表格
+    @discardableResult
+    func dropUserTable() throws -> Int {
+        guard let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            throw YSSQLiteError.onError(value: "获取数据库路径失败")
+        }
+        let db = try Connection("\(documentUrl.absoluteString)/db.sqlite3")
+        try db.execute("drop table users")
+        return 0
     }
 }

@@ -40,6 +40,7 @@
 		188F067124655B7D00CCB5BC /* YSSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F067024655B7D00CCB5BC /* YSSQLiteManager.swift */; };
 		188F067324655D6C00CCB5BC /* YSSQLiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F067224655D6C00CCB5BC /* YSSQLiteController.swift */; };
 		188F0675246573DB00CCB5BC /* YSSQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F0674246573DB00CCB5BC /* YSSQLiteDatabase.swift */; };
+		188F06772466706D00CCB5BC /* RxOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F06762466706D00CCB5BC /* RxOperator.swift */; };
 		189D8F5C23683932009957CA /* SkinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5B23683932009957CA /* SkinManager.swift */; };
 		189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5D236839CA009957CA /* YSSkinController.swift */; };
 		189D8F60236850DB009957CA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8F5F236850DB009957CA /* ViewExtension.swift */; };
@@ -128,6 +129,7 @@
 		188F067024655B7D00CCB5BC /* YSSQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteManager.swift; sourceTree = "<group>"; };
 		188F067224655D6C00CCB5BC /* YSSQLiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteController.swift; sourceTree = "<group>"; };
 		188F0674246573DB00CCB5BC /* YSSQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSQLiteDatabase.swift; sourceTree = "<group>"; };
+		188F06762466706D00CCB5BC /* RxOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxOperator.swift; sourceTree = "<group>"; };
 		189D8F5B23683932009957CA /* SkinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinManager.swift; sourceTree = "<group>"; };
 		189D8F5D236839CA009957CA /* YSSkinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSkinController.swift; sourceTree = "<group>"; };
 		189D8F5F236850DB009957CA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			children = (
 				D0825D36233712580041738C /* Guide */,
 				D0825D3223370F620041738C /* SystemTool.swift */,
+				188F06762466706D00CCB5BC /* RxOperator.swift */,
 			);
 			path = UTools;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */,
+				188F06772466706D00CCB5BC /* RxOperator.swift in Sources */,
 				188F066524650D3600CCB5BC /* RunloopController.m in Sources */,
 				18DD5AA723027F0E00FCB04F /* YSTabBarController.swift in Sources */,
 				D0825D3D233714180041738C /* GuideController.swift in Sources */,
