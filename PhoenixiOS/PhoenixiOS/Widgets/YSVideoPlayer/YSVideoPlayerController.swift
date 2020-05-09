@@ -27,7 +27,7 @@ class YSVideoPlayerController: YSBaseController {
     private var avplayerLayer: AVPlayerLayer!
 
     /// actionCase1 弃用
-    private var mpPlayer: MPMoviePlayerController!
+//    private var mpPlayer: MPMoviePlayerController!
 
     /// testButton
     private var imageView: UIImageView = UIImageView()
@@ -120,7 +120,7 @@ class YSVideoPlayerController: YSBaseController {
         buttoncase1 = UIButton()
         buttoncase1.backgroundColor = UIColor.lightGray
         buttoncase1.setTitle("actioncase1_弃用", for: UIControl.State.normal)
-        buttoncase1.addTarget(self, action: #selector(actionCase1), for: UIControl.Event.touchUpInside)
+//        buttoncase1.addTarget(self, action: #selector(actionCase1), for: UIControl.Event.touchUpInside)
         contentView.addSubview(buttoncase1)
 
         buttoncase1.snp.makeConstraints { (make) in
@@ -152,24 +152,23 @@ class YSVideoPlayerController: YSBaseController {
     }
 
     @objc private func actioncase2() {
-        let autoPlay = true
         let avplayController = AVPlayerViewController()
         let playUrl = currentUrl
         avplayer = AVPlayer(url: URL(string: playUrl)!)
-        autoPlay ? avplayer.play() : {}()
+        avplayer.play()
         let avplayerLayer = AVPlayerLayer(player: avplayer)
         avplayerLayer.backgroundColor = UIColor.gray.cgColor
         avplayController.player = avplayer
         present(avplayController, animated: true, completion: nil)
     }
 
-    @objc private func actionCase1() {
-        let playUrl = currentUrl
-        mpPlayer = MPMoviePlayerController(contentURL: URL(string: playUrl)!)
-        mpPlayer.view.frame = imageView.bounds
-        mpPlayer.view.backgroundColor = UIColor.lightGray
-        imageView.addSubview(mpPlayer.view)
-    }
+//    @objc private func actionCase1() {
+//        let playUrl = currentUrl
+//        mpPlayer = MPMoviePlayerController(contentURL: URL(string: playUrl)!)
+//        mpPlayer.view.frame = imageView.bounds
+//        mpPlayer.view.backgroundColor = UIColor.lightGray
+//        imageView.addSubview(mpPlayer.view)
+//    }
 
     @objc private func actionCase0() {
         let playUrl = currentUrl
