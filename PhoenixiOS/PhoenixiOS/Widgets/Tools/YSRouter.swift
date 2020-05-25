@@ -66,4 +66,18 @@ class YSRouter: NSObject {
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    /// 运行时 Runloop
+    static func showRunloopController(_ navigationController: UINavigationController?) {
+        let vc = RunloopController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    /// 数据库 YSSQLiteController
+    static func showYSSQLiteController(_ navigationController: UINavigationController?) {
+        let vc = YSSQLiteController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
