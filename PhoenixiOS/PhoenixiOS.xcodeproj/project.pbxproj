@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180449D7247B70B00078CDA7 /* YSToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180449D5247B70B00078CDA7 /* YSToastController.swift */; };
 		180572042303C10D000565AF /* TestCC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180572022303C10C000565AF /* TestCC.cpp */; };
 		1805720A2303C1AB000565AF /* YSFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 180572082303C1AB000565AF /* YSFile.mm */; };
 		1805720F2303E05C000565AF /* YSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805720E2303E05C000565AF /* YSButton.swift */; };
 		180572142303E15D000565AF /* YSButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180572132303E15D000565AF /* YSButtonController.swift */; };
-		1805721D23043BCE000565AF /* YSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805721C23043BCE000565AF /* YSToast.swift */; };
-		1805722223043D3D000565AF /* YSToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722123043D3D000565AF /* YSToastController.swift */; };
 		1805722523051B87000565AF /* YSQRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805722423051B87000565AF /* YSQRController.swift */; };
 		1805725023064A84000565AF /* YSQRImageBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1805724F23064A84000565AF /* YSQRImageBuffer.mm */; };
 		1805727123068E92000565AF /* YSVideoRtmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805727023068E92000565AF /* YSVideoRtmp.swift */; };
@@ -72,14 +71,13 @@
 
 /* Begin PBXFileReference section */
 		105C1903A7A9D935B3F799C3 /* Pods-PhoenixiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS.release.xcconfig"; sourceTree = "<group>"; };
+		180449D5247B70B00078CDA7 /* YSToastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSToastController.swift; sourceTree = "<group>"; };
 		180572022303C10C000565AF /* TestCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestCC.cpp; sourceTree = "<group>"; };
 		180572032303C10C000565AF /* TestCC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestCC.hpp; sourceTree = "<group>"; };
 		180572082303C1AB000565AF /* YSFile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YSFile.mm; sourceTree = "<group>"; };
 		180572092303C1AB000565AF /* YSFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSFile.h; sourceTree = "<group>"; };
 		1805720E2303E05C000565AF /* YSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSButton.swift; sourceTree = "<group>"; };
 		180572132303E15D000565AF /* YSButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSButtonController.swift; sourceTree = "<group>"; };
-		1805721C23043BCE000565AF /* YSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSToast.swift; sourceTree = "<group>"; };
-		1805722123043D3D000565AF /* YSToastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSToastController.swift; sourceTree = "<group>"; };
 		1805722423051B87000565AF /* YSQRController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSQRController.swift; sourceTree = "<group>"; };
 		1805724E23064A84000565AF /* YSQRImageBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSQRImageBuffer.h; sourceTree = "<group>"; };
 		1805724F23064A84000565AF /* YSQRImageBuffer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = YSQRImageBuffer.mm; sourceTree = "<group>"; };
@@ -158,6 +156,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180449D3247B70B00078CDA7 /* YSToast */ = {
+			isa = PBXGroup;
+			children = (
+				180449D5247B70B00078CDA7 /* YSToastController.swift */,
+			);
+			path = YSToast;
+			sourceTree = "<group>";
+		};
 		1805720D2303E047000565AF /* YSButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,15 +171,6 @@
 				180572132303E15D000565AF /* YSButtonController.swift */,
 			);
 			path = YSButton;
-			sourceTree = "<group>";
-		};
-		1805721B23043B7B000565AF /* YSToast */ = {
-			isa = PBXGroup;
-			children = (
-				1805721C23043BCE000565AF /* YSToast.swift */,
-				1805722123043D3D000565AF /* YSToastController.swift */,
-			);
-			path = YSToast;
 			sourceTree = "<group>";
 		};
 		1805722323051B6B000565AF /* YSQR */ = {
@@ -309,6 +306,7 @@
 		18DD5A94230152DA00FCB04F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				180449D3247B70B00078CDA7 /* YSToast */,
 				189D8F5A2368390E009957CA /* Skin */,
 				D0825D3E233720510041738C /* FirstResponder */,
 				D0825D3B233713F60041738C /* GuideCase */,
@@ -316,7 +314,6 @@
 				1807ADED230E386300082C94 /* YSVideoPlayer */,
 				18057272230690FE000565AF /* YSVideoRtmp */,
 				1805722323051B6B000565AF /* YSQR */,
-				1805721B23043B7B000565AF /* YSToast */,
 				1805720D2303E047000565AF /* YSButton */,
 				186B32C52303A73500856A08 /* Arithmetic */,
 				18DD5AA123027E0E00FCB04F /* Tools */,
@@ -583,38 +580,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoenixiOS/Pods-PhoenixiOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -627,9 +601,9 @@
 				18DD5A9D230156A200FCB04F /* YSMainCell.swift in Sources */,
 				18DD5AA723027F0E00FCB04F /* YSTabBarController.swift in Sources */,
 				D0825D3D233714180041738C /* GuideController.swift in Sources */,
-				1805721D23043BCE000565AF /* YSToast.swift in Sources */,
 				186A3A7422E1623D003EE67A /* ViewController.swift in Sources */,
 				18DD5A992301556500FCB04F /* YSSwitchController.swift in Sources */,
+				180449D7247B70B00078CDA7 /* YSToastController.swift in Sources */,
 				186A3A7222E1623D003EE67A /* AppDelegate.swift in Sources */,
 				D0825D40233720810041738C /* GetResponderController.swift in Sources */,
 				189D8F5E236839CA009957CA /* YSSkinController.swift in Sources */,
@@ -649,7 +623,6 @@
 				D0825D39233712580041738C /* GuideManager.swift in Sources */,
 				1805727423069266000565AF /* YSSystemQR.swift in Sources */,
 				D0825D3323370F620041738C /* SystemTool.swift in Sources */,
-				1805722223043D3D000565AF /* YSToastController.swift in Sources */,
 				18DD5AAF230282BD00FCB04F /* YSImageManager.swift in Sources */,
 				1807ADF1230E441B00082C94 /* YSVideoPlayerTools.swift in Sources */,
 				180572042303C10D000565AF /* TestCC.cpp in Sources */,
@@ -839,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -866,7 +839,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMDZ97XAH;
 				INFOPLIST_FILE = PhoenixiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

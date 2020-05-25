@@ -1,54 +1,59 @@
 PODS:
-  - Alamofire (4.9.1)
-  - Kingfisher (4.10.1)
-  - ReactiveCocoa (9.0.0):
-    - ReactiveSwift (~> 5.0)
-  - ReactiveSwift (5.0.1):
-    - Result (~> 4.1)
-  - Result (4.1.0)
+  - Alamofire (5.2.0)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - ReactiveCocoa (10.3.0):
+    - ReactiveSwift (~> 6.2)
+  - ReactiveSwift (6.2.1)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.1):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
-  - SnapKit (4.2.0)
-  - SwiftSoup (2.2.1)
+  - SnapKit (5.0.1)
+  - SwiftSoup (2.3.2)
+  - YSToast (1.0.2.1)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
-  - ReactiveCocoa (~> 9.0)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
+  - ReactiveCocoa
+  - RxCocoa (~> 5.0.1)
+  - RxSwift (~> 5.0.1)
   - SnapKit
   - SwiftSoup
+  - YSToast (from `submodules/YSToast`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Kingfisher
     - ReactiveCocoa
     - ReactiveSwift
-    - Result
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftSoup
 
+EXTERNAL SOURCES:
+  YSToast:
+    :path: submodules/YSToast
+
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
-  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
+  ReactiveSwift: 07ddf579f4eb3ee3bd656214f0461aaf2c0fd639
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftSoup: a91d3c96ecb6f8f13005552ef60f9075aae4a7f3
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
+  YSToast: e74b9394389b4cf97988e7bbb25605c1a9a74d1d
 
-PODFILE CHECKSUM: e23ff4c9f76af8f24d2557f3a92a61b6b6e14a1e
+PODFILE CHECKSUM: 90ffd2692b253915bd161c4bf73e606c888f5d36
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

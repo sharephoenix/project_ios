@@ -1,16 +1,19 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 # Comment this line if you're not using Swift and don't want to use dynamic frameworks
 use_frameworks!
 
 target 'PhoenixiOS' do
     # 响应编程 另外一个是 RxSwift, ReactiveCocoa
-    pod 'RxSwift', '~> 5'
-    pod 'RxCocoa', '~> 5'
-    pod 'ReactiveCocoa', '~> 9.0'
+    pod 'RxSwift', '~> 5.0.1'
+    pod 'RxCocoa', '~> 5.0.1'
+
+    pod 'ReactiveCocoa' #, '~> 10.3.0'
 
     pod 'Alamofire' #, '~> 4.0.1'
     pod 'Kingfisher' #, '~> 3.1.1'
     pod 'SnapKit' #, '~> 4.2.0'
     pod 'SwiftSoup' # html 标签解析 puppeteer
+#    pod 'YSToast', '~> 1.0.2.1'
+    pod 'YSToast', :path => 'submodules/YSToast'
 end

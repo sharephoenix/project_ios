@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YSToast
 
 class YSVideoRtmp: NSObject {
 

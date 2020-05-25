@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 import CoreImage
+import YSToast
 
 class YSSystemQR: NSObject {
     private var device: AVCaptureDevice!

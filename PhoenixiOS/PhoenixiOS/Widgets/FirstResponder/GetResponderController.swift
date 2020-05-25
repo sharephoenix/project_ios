@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import ReactiveSwift
+import ReactiveCocoa
 
 class GetResponderController: YSBaseController {
 

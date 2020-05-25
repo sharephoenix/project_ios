@@ -13,7 +13,6 @@ class YSBaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
         if navigationController?.viewControllers.count ?? 0 > 1 {
             hidesBottomBarWhenPushed = true
         }

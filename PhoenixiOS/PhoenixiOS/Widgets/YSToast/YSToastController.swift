@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import YSToast
+import RxSwift
 
 class YSToastController: YSBaseController {
 
@@ -19,7 +21,7 @@ class YSToastController: YSBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         var parentView: UIView!
 
         toastAsyncButton.setTitle("TopCenter_async", for: .normal)
@@ -88,7 +90,7 @@ class YSToastController: YSBaseController {
                 make.bottom.equalToSuperview()
                 make.leading.equalToSuperview()
                 make.trailing.equalToSuperview()
-                make.height.equalTo(399)
+                make.height.equalTo(299)
             }
         }
 
@@ -180,16 +182,5 @@ extension YSToastController: UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("selected:\(row)")
-        let signal: CGFloat = row % 2 == 1 ? -1 : 1
-
-        if component == 0 {
-            YSToast.instance.direction = YSToast.Direction(rawValue: row)!
-        }
-        if component == 1 {
-            YSToast.instance.offsetX = CGFloat(row) * CGFloat(20) * signal
-        }
-        if component == 2 {
-            YSToast.instance.offsetY = CGFloat(row) * CGFloat(20) * signal
-        }
     }
 }
